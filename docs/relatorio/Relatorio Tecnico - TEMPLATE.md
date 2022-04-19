@@ -239,70 +239,70 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Projeto de Interface
 
-O Projeto de Interface fora feito utilizando a ferramenta de planejamento de projeto <a href=“https://miro.com/“>Miro</a>. Nesta etapa, busca-se atender os requisitos funcionais e não funcionais especificados nas [Especificações do Projeto](#especificações-do-projeto), utilizando-se dos dados coletados nas pesquisas qualitativas. Para isso, fez-se útil o User Flow, mapeando a atividade do usuário dentro da aplicação, e os wireframes, que ajudam a dar uma pré-visualização da solução a ser desenvolvida.
-
-Pensando na dificuldade do usuário em encontrar dados sobre cursos da área de TI na internet, fez-se uma prototipação focada em dar informações diretas e separadas por curso, além de uma ferramenta para auxiliar o usuário a definir qual curso melhor se encaixa ao seu perfil.
+<p> O Projeto de Interface fora feito utilizando a ferramenta de planejamento de projeto <a href=“https://miro.com/“>Miro</a>. Nesta etapa, busca-se atender os requisitos funcionais e não funcionais especificados nas [Especificações do Projeto](#especificações-do-projeto), utilizando-se dos dados coletados nas pesquisas qualitativas. Para isso, fez-se útil o User Flow, mapeando a atividade do usuário dentro da aplicação, e os wireframes, que ajudam a dar uma pré-visualização da solução a ser desenvolvida.</p>
+</br>
+<p> Pensando na dificuldade do usuário em encontrar dados sobre cursos da área de TI na internet, fez-se uma prototipação focada em dar informações diretas e separadas por curso, além de uma ferramenta para auxiliar o usuário a definir qual curso melhor se encaixa ao seu perfil.</p>
 
 ## User Flow
 
 **User Flow Principal:**
 ![UserFlow Principal](images/userflow-principal.jpg)
-Pelo User Flow de toda aplicação, é possivel perceber que, ao acessar o site, permite-se quatro principais caminhos: Cursos, universidades, formulário e autenticação.
-No caminho de cursos, é possivel ver uma listagem dos cursos da área de TI e, se autenticado, favoritar os que mais interessam ao usuário.
-No de universidades, são listadas universidades que oferecem os cursos da área de TI, possibilitando o usuário filtrar por curso e preço.
-No de autenticação, possuí as funções de login, cadastro e edição de perfil.
+<p> Pelo User Flow de toda aplicação, é possivel perceber que, ao acessar o site, permite-se quatro principais caminhos: Cursos, universidades, formulário e autenticação.</p>
+<p> No caminho de cursos, é possivel ver uma listagem dos cursos da área de TI e, se autenticado, favoritar os que mais interessam ao usuário.</p>
+<p> No de universidades, são listadas universidades que oferecem os cursos da área de TI, possibilitando o usuário filtrar por curso e preço.</p>
+<p> No de autenticação, possuí as funções de login, cadastro e edição de perfil.</p>
 
 **User Flow do Formulário:**
 ![UserFlow Formulário](images/userflow-formulario.jpg)
-Por ser mais extenso, fora feito um User Flow apenas para o processo de formulário. É possivel verificar que, respondidas as perguntas solicitadas, o sistema, com base nas respostas, indicará o usuário qual o curso que mais se assemelha ao seu perfil, exibindo manchetes e informações sobre. Após a leitura, o usuário poderá informar ao sistema que aquele curso não o agrada, gerando-se um novo.
+<p> Por ser mais extenso, fora feito um User Flow apenas para o processo de formulário. É possivel verificar que, respondidas as perguntas solicitadas, o sistema, com base nas respostas, indicará o usuário qual o curso que mais se assemelha ao seu perfil, exibindo manchetes e informações sobre. Após a leitura, o usuário poderá informar ao sistema que aquele curso não o agrada, gerando-se um novo.</p>
 
 ## Wireframes
 
 **Tela inicial:**
 ![Tela inicial](images/wireframe-home.jpg)
-Esta é a tela inicial do projeto. Contém um header navigation, com a função de navegar por toda aplicação. A tela inicial possui um carrousel, que destacará as principais notícias da área, e manchetes sobre cursos de TI.
+<p>Esta é a tela inicial do projeto. Contém um header navigation, com a função de navegar por toda aplicação. A tela inicial possui um carrousel, que destacará as principais notícias da área, e manchetes sobre cursos de TI.</p>
 
 **Notícias**
 ![Notícias](images/wireframe-noticias.jpg)
-A tela de notícias ainda está dentro da tela inicial. Ao clicar no botão "Notícias" no header, o usuário será direcionado a seção de manchetes.
+<p>A tela de notícias ainda está dentro da tela inicial. Ao clicar no botão "Notícias" no header, o usuário será direcionado a seção de manchetes.</p>
 
 **Cursos**
 ![Cursos](images/wireframe-cursos.jpg)
-Nesta tela, acessada pelo botão "Cursos" no header, será apresentado ao usuário uma lista de cursos com uma breve descrição. O usuário pode favoritar ou desfavoritar cursos.
+<p>Nesta tela, acessada pelo botão "Cursos" no header, será apresentado ao usuário uma lista de cursos com uma breve descrição. O usuário pode favoritar ou desfavoritar cursos.</p>
 
 **Curso**
 ![Curso](images/wireframe-curso1.jpg)
-Ao selecionar um curso na tela de cursos, o usuário será redirecionado para uma nova tela, que detalhará melhor o curso escolhido e dará a opção de ver universidades que o oferecem.
+<p>Ao selecionar um curso na tela de cursos, o usuário será redirecionado para uma nova tela, que detalhará melhor o curso escolhido e dará a opção de ver universidades que o oferecem.</p>
 
 **Universidades**
 ![Universidades](images/wireframe-universidades.jpg)
-Clicando em "Universidades" do header, esta tela será exibida, listando todas universidades que oferecem cursos de TI. Também será possível filtrar as universidades exibidas por curso e preço. Ao clicar em uma universidade, o usuário será redirecionado para o site da instituição.
+<p>Clicando em "Universidades" do header, esta tela será exibida, listando todas universidades que oferecem cursos de TI. Também será possível filtrar as universidades exibidas por curso e preço. Ao clicar em uma universidade, o usuário será redirecionado para o site da instituição.</p>
 
 **Formulário**
 ![Formulário](images/wireframe-formulario.jpg)
-Nesta página, também acessada pelo header, o usuário responderá perguntas e, com base nas respostas, o sistema encontrará um curso que se assemelha ao perfil do usuário.
+<p>Nesta página, também acessada pelo header, o usuário responderá perguntas e, com base nas respostas, o sistema encontrará um curso que se assemelha ao perfil do usuário.</p>
 
 **Resultado do Formulário**
 ![Resultado do Formulário](images/wireframe-resultForm.jpg)
-Ao preencher todo o formulario e clicar em enviar, o sistema definirá o curso que aparenta ser do gosto do usuário e o encaminhará para uma página com os dados do curso. Esses dados são: uma breve descrição e manchetes do curso ou universidades que o oferecem.
+<p>Ao preencher todo o formulario e clicar em enviar, o sistema definirá o curso que aparenta ser do gosto do usuário e o encaminhará para uma página com os dados do curso. Esses dados são: uma breve descrição e manchetes do curso ou universidades que o oferecem.</p>
 ![Resultado do Formulário 2](images/wireframe-resultForm2.jpg)
-Clicando em "Me dê outro curso", o sistema retornará outro curso que se assemelha ao perfil obtido no formulário.
+<p>Clicando em "Me dê outro curso", o sistema retornará outro curso que se assemelha ao perfil obtido no formulário.</p>
 
 **Login**
 ![Login](images/wireframe-userLogin.jpg)
-Ao clicar no botão de perfil do header, se o usuário não estiver autenticado no sistema, será redirecionado à pagina de login.
+<p>Ao clicar no botão de perfil do header, se o usuário não estiver autenticado no sistema, será redirecionado à pagina de login.</p>
 
 **Cadastro**
 ![Cadastro](images/wireframe-userCadastro.jpg)
-Selecionando-se "Cadastre-se" na tela de login, o usuário será redirecionado a tela de cadastro.
+<p>Selecionando-se "Cadastre-se" na tela de login, o usuário será redirecionado a tela de cadastro.</p>
 
 **Perfil**
 ![Perfil](images/wireframe-profile.jpg)
-Autenticado, o usuário poderá selecionar "Ver conta" no menu de usuário. Clicando, exibirá uma tela com as informações da conta e cursos favoritados.
+<p>Autenticado, o usuário poderá selecionar "Ver conta" no menu de usuário. Clicando, exibirá uma tela com as informações da conta e cursos favoritados.</p>
 
 **Histórico**
 ![Histórico](images/wireframe-userHistorico.jpg)
-Ao selecionar "Últimos Formulários" no menu de usuário, exibirá uma tela com os ultimos resultados recebidos do formulário. Ao selecionar um, será exibido a tela "Resultado do Formulário" do curso selecionado.
+<p>Ao selecionar "Últimos Formulários" no menu de usuário, exibirá uma tela com os ultimos resultados recebidos do formulário. Ao selecionar um, será exibido a tela "Resultado do Formulário" do curso selecionado.</p>
 
 
 # Metodologia
@@ -338,10 +338,10 @@ Ao selecionar "Últimos Formulários" no menu de usuário, exibirá uma tela com
 
 ## Ferramentas
 
-O editor de código escolhido foi o VsCode. Além de ter extensões compatíveis com HTML e CSS, possuí também ferramentas para visualizar o controle de versão e o Git Flow.
-Para comunicação, estamos utilizando o Trello. Por meio de um quadro Kanban as tarefas são dividias, permitindo que todos possam documentar o seu progresso nas tarefas.
-Na diagramação, utilizamos o Miro. Por ser uma ferramenta que possibilita a criação de fluxogramas, wireframes e outros processos de prototipação, escolhemos o Miro a fim de salvar tempo e melhorar a produtividade, uma vez que dominando a ferramenta é possivel realizar toda a etapa prototipação.
-Como hospedagem, escolhemos o Heroku, que, além de ser gratuito, permite a conexão direta com o github sem muita burocracia. 
+<p> O editor de código escolhido foi o VsCode. Além de ter extensões compatíveis com HTML e CSS, possuí também ferramentas para visualizar o controle de versão e o Git Flow.</p>
+<p> Para comunicação, estamos utilizando o Trello. Por meio de um quadro Kanban as tarefas são dividias, permitindo que todos possam documentar o seu progresso nas tarefas.</p>
+<p> Na diagramação, utilizamos o Miro. Por ser uma ferramenta que possibilita a criação de fluxogramas, wireframes e outros processos de prototipação, escolhemos o Miro a fim de salvar tempo e melhorar a produtividade, uma vez que dominando a ferramenta é possivel realizar toda a etapa prototipação.</p>
+<p> Como hospedagem, escolhemos o Heroku, que, além de ser gratuito, permite a conexão direta com o github sem muita burocracia.</p>
 
 | Ambiente  | Plataforma              |Link de Acesso |
 |-----------|-------------------------|---------------|
@@ -352,8 +352,8 @@ Como hospedagem, escolhemos o Heroku, que, além de ser gratuito, permite a cone
 
 ## Controle de Versão
 
-Para o controle de versão, adotamos o [Git](https://git-scm.com/), permitindo que a equipe trabalhe, dentro do projeto, de forma assíncrona. Para evitar conflitos durante a mescla de arquivos, adotaremos a ramificação, permitindo que versões paralelas do projeto sejam criadas, facilitando a divisão do código que está em processo de testes e melhorias e do que está em produção.
-Adotaremos a seguinte convenção para branchs: 
+<p> Para o controle de versão, adotamos o [Git](https://git-scm.com/), permitindo que a equipe trabalhe, dentro do projeto, de forma assíncrona. Para evitar conflitos durante a mescla de arquivos, adotaremos a ramificação, permitindo que versões paralelas do projeto sejam criadas, facilitando a divisão do código que está em processo de testes e melhorias e do que está em produção.</p>
+<p>Adotaremos a seguinte convenção para branchs:</p> 
  - `master`: versão estável já testada do software
  - `unstable`: versão já testada do software, porém instável
  - `testing`: versão em testes do software
