@@ -186,8 +186,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Cadastrar usuário | ALTA | 
+|RF-002| Autenticar usuário    | ALTA |
+|RF-003| Alterar usuário       | BAIXA |
+|RF-004| Formulário para identificar o curso que usuário assemelha | ALTA |
+|RF-005| Histórico de formulários respondidos pelo usuário         | MEDIA |
+|RF-006| Permitir que o usuário favorite cursos     | BAIXA |
+|RF-007| Exibir manchetes de cursos favoritados     | BAIXA |
+|RF-008| Exibir manchetes do tema "Cursos de TI     | ALTA |
+|RF-009| Exibir universidades que possuem cursos de TI | ALTA |
+|RF-010| Permitir a filtragem de universidades por preço | MEDIA |
+|RF-011| Permitir a filtragem de universidades por curso | ALTA |
+|RF-012| Comparação de preços de faculdades particulares | BAIXA |
 
 
 ### Requisitos não Funcionais
@@ -196,27 +206,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na
->   plataforma (ex: cadastro de usuário).
->
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade,
->   desempenho, confiabilidade, segurança ou outro (ex: suporte a
->   dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-> 
-> **Links Úteis**:
-> 
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|RNF-003| Base de dados que relaciona curso com perfil do usuário | ALTA |
 
 
 ## Restrições
@@ -227,14 +217,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| Não pode ser desenvolvido um módulo de backend        |
-
-
-> Enumere as restrições à sua solução. Lembre-se de que as restrições
-> geralmente limitam a solução candidata.
-> 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 
 # Projeto de Interface
@@ -354,14 +336,14 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 <p> Para o controle de versão, adotamos o [Git](https://git-scm.com/), permitindo que a equipe trabalhe, dentro do projeto, de forma assíncrona. Para evitar conflitos durante a mescla de arquivos, adotaremos a ramificação, permitindo que versões paralelas do projeto sejam criadas, facilitando a divisão do código que está em processo de testes e melhorias e do que está em produção.</p>
 <p>Adotaremos a seguinte convenção para branchs:</p> 
- - `master`: versão estável já testada do software
- - `unstable`: versão já testada do software, porém instável
- - `testing`: versão em testes do software
- - `dev`: versão de desenvolvimento do software
-E para etiquetas: 
- - `bugfix`: uma funcionalidade encontra-se com problemas
- - `enhancement`: uma funcionalidade precisa ser melhorada
- - `feature`: uma nova funcionalidade precisa ser introduzida
+ - `master`: versão estável já testada do software</br>
+ - `unstable`: versão já testada do software, porém instável</br>
+ - `testing`: versão em testes do software</br>
+ - `dev`: versão de desenvolvimento do software</br>
+<p>E para etiquetas:</p> 
+ - `bugfix`: uma funcionalidade encontra-se com problemas</br>
+ - `enhancement`: uma funcionalidade precisa ser melhorada</br>
+ - `feature`: uma nova funcionalidade precisa ser introduzida</br>
 
 # **############## SPRINT 1 ACABA AQUI #############**
 
