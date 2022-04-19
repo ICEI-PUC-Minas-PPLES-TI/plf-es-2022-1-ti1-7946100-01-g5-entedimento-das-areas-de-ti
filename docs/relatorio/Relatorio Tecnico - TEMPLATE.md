@@ -239,50 +239,70 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Projeto de Interface
 
-......  COLOQUE AQUI O SEU TEXTO DE INTRODUÇÃO ......
+O Projeto de Interface fora feito utilizando a ferramenta de planejamento de projeto <a href=“https://miro.com/“>Miro</a>. Nesta etapa, busca-se atender os requisitos funcionais e não funcionais especificados nas [Especificações do Projeto](#especificações-do-projeto), utilizando-se dos dados coletados nas pesquisas qualitativas. Para isso, fez-se útil o User Flow, mapeando a atividade do usuário dentro da aplicação, e os wireframes, que ajudam a dar uma pré-visualização da solução a ser desenvolvida.
 
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
+Pensando na dificuldade do usuário em encontrar dados sobre cursos da área de TI na internet, fez-se uma prototipação focada em dar informações diretas e separadas por curso, além de uma ferramenta para auxiliar o usuário a definir qual curso melhor se encaixa ao seu perfil.
 
 ## User Flow
 
-......  INCLUA AQUI O DIAGRAMA COM O FLUXO DO USUÁRIO NA APLICAÇÃO ......
+**User Flow Principal:**
+![UserFlow Principal](images/userflow-principal.jpg)
+Pelo User Flow de toda aplicação, é possivel perceber que, ao acessar o site, permite-se quatro principais caminhos: Cursos, universidades, formulário e autenticação.
+No caminho de cursos, é possivel ver uma listagem dos cursos da área de TI e, se autenticado, favoritar os que mais interessam ao usuário.
+No de universidades, são listadas universidades que oferecem os cursos da área de TI, possibilitando o usuário filtrar por curso e preço.
+No de autenticação, possuí as funções de login, cadastro e edição de perfil.
 
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
->
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
->
-> **Exemplo**:
-> 
-> ![Exemplo de UserFlow](images/userflow.jpg)
-
+**User Flow do Formulário:**
+![UserFlow Formulário](images/userflow-formulario.jpg)
+Por ser mais extenso, fora feito um User Flow apenas para o processo de formulário. É possivel verificar que, respondidas as perguntas solicitadas, o sistema, com base nas respostas, indicará o usuário qual o curso que mais se assemelha ao seu perfil, exibindo manchetes e informações sobre. Após a leitura, o usuário poderá informar ao sistema que aquele curso não o agrada, gerando-se um novo.
 
 ## Wireframes
 
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
+**Tela inicial:**
+![Tela inicial](images/wireframe-home.jpg)
+Esta é a tela inicial do projeto. Contém um header navigation, com a função de navegar por toda aplicação. A tela inicial possui um carrousel, que destacará as principais notícias da área, e manchetes sobre cursos de TI.
 
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
-> 
-> ![Exemplo de Wireframe](images/wireframe-example.png)
+**Notícias**
+![Notícias](images/wireframe-noticias.jpg)
+A tela de notícias ainda está dentro da tela inicial. Ao clicar no botão "Notícias" no header, o usuário será direcionado a seção de manchetes.
+
+**Cursos**
+![Cursos](images/wireframe-cursos.jpg)
+Nesta tela, acessada pelo botão "Cursos" no header, será apresentado ao usuário uma lista de cursos com uma breve descrição. O usuário pode favoritar ou desfavoritar cursos.
+
+**Curso**
+![Curso](images/wireframe-curso1.jpg)
+Ao selecionar um curso na tela de cursos, o usuário será redirecionado para uma nova tela, que detalhará melhor o curso escolhido e dará a opção de ver universidades que o oferecem.
+
+**Universidades**
+![Universidades](images/wireframe-universidades.jpg)
+Clicando em "Universidades" do header, esta tela será exibida, listando todas universidades que oferecem cursos de TI. Também será possível filtrar as universidades exibidas por curso e preço. Ao clicar em uma universidade, o usuário será redirecionado para o site da instituição.
+
+**Formulário**
+![Formulário](images/wireframe-formulario.jpg)
+Nesta página, também acessada pelo header, o usuário responderá perguntas e, com base nas respostas, o sistema encontrará um curso que se assemelha ao perfil do usuário.
+
+**Resultado do Formulário**
+![Resultado do Formulário](images/wireframe-resultForm.jpg)
+Ao preencher todo o formulario e clicar em enviar, o sistema definirá o curso que aparenta ser do gosto do usuário e o encaminhará para uma página com os dados do curso. Esses dados são: uma breve descrição e manchetes do curso ou universidades que o oferecem.
+![Resultado do Formulário 2](images/wireframe-resultForm2.jpg)
+Clicando em "Me dê outro curso", o sistema retornará outro curso que se assemelha ao perfil obtido no formulário.
+
+**Login**
+![Login](images/wireframe-userLogin.jpg)
+Ao clicar no botão de perfil do header, se o usuário não estiver autenticado no sistema, será redirecionado à pagina de login.
+
+**Cadastro**
+![Cadastro](images/wireframe-userCadastro.jpg)
+Selecionando-se "Cadastre-se" na tela de login, o usuário será redirecionado a tela de cadastro.
+
+**Perfil**
+![Perfil](images/wireframe-profile.jpg)
+Autenticado, o usuário poderá selecionar "Ver conta" no menu de usuário. Clicando, exibirá uma tela com as informações da conta e cursos favoritados.
+
+**Histórico**
+![Histórico](images/wireframe-userHistorico.jpg)
+Ao selecionar "Últimos Formulários" no menu de usuário, exibirá uma tela com os ultimos resultados recebidos do formulário. Ao selecionar um, será exibido a tela "Resultado do Formulário" do curso selecionado.
 
 
 # Metodologia
