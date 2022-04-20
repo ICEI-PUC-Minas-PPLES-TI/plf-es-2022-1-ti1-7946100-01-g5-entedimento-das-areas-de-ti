@@ -52,18 +52,19 @@ Engenharia de Software.
 
 ## Problema
 
-O problema apresentado é sobre a dificuldade dos jovens em entender as áreas de TI, que ingressaram na faculdade ou até mesmo que estão em duvida de qual área começar. O contexto da aplicação irá ser usado para os jovens que ainda não tem certeza e/ou conhecimento sobre a área de TI que quer começar seus estudos.
+<p> Aproximando-se do período de escolha de graduações, os jovens que se interessam por tecnologia da informação passam por impasse. Existe uma grande dificuldade em entender e diferenciar os tópicos abordados nas graduações, gerada por má informação de toda a comunidade e a falta de organização nos conteúdos explicativos disponibilizados na internet. Além disso, fala-se muito dos cursos "Ciências da Computação" e "Engenharia da Computação", ofuscando os demais cursos, fazendo que os jovens possam acabar optando por um curso que não se identificam tanto.</p>
 
 ## Objetivos
 
-Como objetivo geral, nosso trabalho é desenvolver um software como um teste vocacional para auxiliar o jovem a entender as aréas de TI e direciona-lo para a área de TI que mais se identifica. Nossa prática consiste em fazer perguntas estratégicas ao usuário sobre quais atividades ele mais se adequa, para no final apresenta-lo qual seria a área com maior conforto e desenvolvimento para o usuário.
+<p>Como objetivo geral, nosso trabalho é desenvolver um software que atua como um teste vocacional, auxiliando jovens a entenderem as aréas de TI, direcionando-os para o curso de graduação que mais combina com seu perfil.</p> 
+<p>Para isso, adotamos uma estratégia que consiste em fazer perguntas ao usuário voltadas a área de tecnologia da informação, com o intuito de identificar o seu perfil. Uma vez analisado, pode-se assumir quais atividades o usuário mais se adequa, apresentando-o ao curso que suprirá as expectativas do usuário relacionadas ao conteúdo abordado na graduação.</p>
 
 ## Justificativa
 Por conta dos integrantes terem passado pelo mesmo problema, foi uma motivação para trabalhar com esta aplicação,com objetivo de auxiliar os jovens a entender qual a área certa para eles.
 
 ## Público-Alvo
 
-Os principais alvos da nossa aplicação são os jovens de de 14 a 25 anos que podem ou não ter ingressado na faculdade, possuindo dificuldades em escolher o curso certo, ou que ja escolheram um curso e não se identificaram com o curso. 
+<p> Para identificar o nosso público alvo, fizemos entrevistas qualitativas com jovens que se interessam pela área de tecnologia e pretendem cursar a graduação. Após verificar que este grupo de indivíduos passam pelos problemas listados, embasou-se neles os principais alvos da aplicação. Chegou-se a conclusão que os principais alvos são pessoas jovens, entre 14 a 25 anos, que querem aprender sobre tecnologia e demonstram interesse em cursar a graduação ou que já entraram não se identificaram com o curso. Ao se deparar com a dificuldade de definir qual o melhor curso de tecnologia, pessoas com este perfil são potenciais usuários de nossa aplicação.</p>
  
 # Especificações do Projeto
 <p>Nessa parte do projeto, utilizou-se de várias ferramentas e técnicas para auxiliar na produção do projeto.</p> 
