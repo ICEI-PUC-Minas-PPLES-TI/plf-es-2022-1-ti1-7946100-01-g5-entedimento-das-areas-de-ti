@@ -1,21 +1,17 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Dificuldade dos jovens em entender as áreas de TI.
 
 `CURSO` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Engenharia de Software.
 
 ## Participantes
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
->
 > Os membros do grupo são: 
-> - Fulano da Silva
-> - Ciclano Albuquerque
+> - Gabriel Herolt Araújo. 
+> - Mellyssa Meireles Dos Santos.
+> - Miguel Alves Fernandes Moraes.
 
 # Estrutura do Documento
 
@@ -56,7 +52,7 @@
 
 ## Problema
 
-......  COLOQUE AQUI O SEU TEXTO ......
+O problema apresentado é sobre a dificuldade dos jovens em entender as áreas de TI, que ingressaram na faculdade ou até mesmo que estão em duvida de qual área começar. O contexto da aplicação irá ser usado para os jovens que ainda não tem certeza e/ou conhecimento sobre a área de TI que quer começar seus estudos.
 
 > Nesse momento você deve apresentar o problema que a sua aplicação deve
 > resolver. No entanto, não é a hora de comentar sobre a aplicação.
@@ -76,7 +72,7 @@
 
 ## Objetivos
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Como objetivo geral, nosso trabalho é desenvolver um software como um teste vocacional para auxiliar o jovem a entender as aréas de TI e direciona-lo para a área de TI que mais se identifica. Nossa prática consiste em fazer perguntas estratégicas ao usuário sobre quais atividades ele mais se adequa, para no final apresenta-lo qual seria a área com maior conforto e desenvolvimento para o usuário.
 
 > Aqui você deve descrever os objetivos do trabalho indicando que o
 > objetivo geral é desenvolver um software para solucionar o problema
@@ -88,8 +84,7 @@
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
-
-......  COLOQUE AQUI O SEU TEXTO ......
+Por conta dos integrantes terem passado pelo mesmo problema, foi uma motivação para trabalhar com esta aplicação,com objetivo de auxiliar os jovens a entender qual a área certa para eles.
 
 > Descreva a importância ou a motivação para trabalhar com esta aplicação
 > que você escolheu. Indique as razões pelas quais você escolheu seus
@@ -105,8 +100,7 @@
 
 ## Público-Alvo
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
+Os principais alvos da nossa aplicação são os jovens de de 14 a 25 anos que podem ou não ter ingressado na faculdade com dificuldades em escolher o curso certo, ou que ja escolheram um curso e não se identificaram com o curso. 
 > Descreva quem serão as pessoas que usarão a sua aplicação indicando os
 > diferentes perfis. O objetivo aqui não é definir quem serão os
 > clientes ou quais serão os papéis dos usuários na aplicação. A ideia
@@ -123,8 +117,7 @@
 > - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
  
 # Especificações do Projeto
-
-......  COLOQUE AQUI O SEU TEXTO ......
+Nessa parte do projeto, usamos várias ferramentas e técnicas para auxiliar na produção do projeto. Dentre elas são: Trello, Miro, Git, Github, Design thinking,scrum etc.
 
 > Apresente uma visão geral do que será abordado nesta parte do
 > documento, enumerando as técnicas e/ou ferramentas utilizadas para
@@ -309,7 +302,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Divisão de Papéis
 
-......  COLOQUE AQUI O SEU TEXTO ......
+
 
 > Apresente a divisão de papéis e tarefas entre os membros do grupo.
 >
