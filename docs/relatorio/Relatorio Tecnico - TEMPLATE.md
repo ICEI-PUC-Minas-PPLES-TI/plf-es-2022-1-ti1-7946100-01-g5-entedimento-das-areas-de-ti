@@ -54,101 +54,35 @@ Engenharia de Software.
 
 O problema apresentado é sobre a dificuldade dos jovens em entender as áreas de TI, que ingressaram na faculdade ou até mesmo que estão em duvida de qual área começar. O contexto da aplicação irá ser usado para os jovens que ainda não tem certeza e/ou conhecimento sobre a área de TI que quer começar seus estudos.
 
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos.
->
-> Nesse momento, o grupo pode optar por fazer uso
-> de ferramentas como Design Thinking, que permite um olhar de ponta a
-> ponta para o problema.
->
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
-
 ## Objetivos
 
 Como objetivo geral, nosso trabalho é desenvolver um software como um teste vocacional para auxiliar o jovem a entender as aréas de TI e direciona-lo para a área de TI que mais se identifica. Nossa prática consiste em fazer perguntas estratégicas ao usuário sobre quais atividades ele mais se adequa, para no final apresenta-lo qual seria a área com maior conforto e desenvolvimento para o usuário.
 
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
-> 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
 ## Justificativa
 Por conta dos integrantes terem passado pelo mesmo problema, foi uma motivação para trabalhar com esta aplicação,com objetivo de auxiliar os jovens a entender qual a área certa para eles.
 
-> Descreva a importância ou a motivação para trabalhar com esta aplicação
-> que você escolheu. Indique as razões pelas quais você escolheu seus
-> objetivos específicos ou as razões para aprofundar em certos aspectos
-> do software.
-> 
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e
-> dados estatísticos, que podem ser apresentados, com o objetivo de
-> esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
-
 ## Público-Alvo
 
-Os principais alvos da nossa aplicação são os jovens de de 14 a 25 anos que podem ou não ter ingressado na faculdade com dificuldades em escolher o curso certo, ou que ja escolheram um curso e não se identificaram com o curso. 
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
-> 
-> **Links Úteis**:
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Os principais alvos da nossa aplicação são os jovens de de 14 a 25 anos que podem ou não ter ingressado na faculdade, possuindo dificuldades em escolher o curso certo, ou que ja escolheram um curso e não se identificaram com o curso. 
  
 # Especificações do Projeto
-Nessa parte do projeto, usamos várias ferramentas e técnicas para auxiliar na produção do projeto. Dentre elas são: Trello, Miro, Git, Github, Design thinking,scrum etc.
-
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
+<p>Nessa parte do projeto, utilizou-se de várias ferramentas e técnicas para auxiliar na produção do projeto.</p> 
+<p>Dentre elas são:</p> 
+<p><a href="https://trello.com">Trello</a>, para a produção e manuntenção do quadro <i>Kanban</i>;</p>
+<p><a href="https://Miro.com">Miro</a>, para a produção de mapas mentais, wireframes e o processo de Design Thinking;</p>
+<p><a href="https://git-scm.com/">Git</a>, para o versionamento de código;</p>
+<p><a href="https://github.com/">GitHub</a>, como repositório;</p>
+<p>Design Thinking, para captação de ideias do projeto;</p>
+<p>Scrum, como metodologia ágil adotada para desenvolvimento do projeto.</p>
 
 ## Personas e Mapas de Empatia
 
-......  COLOQUE AQUI O SEU TEXTO ......
+<p>Para criação de nossa persona, tomamos como base o perfil médio dos entrevistados que demonstraram interesse no projeto. As características marcantes deste perfil são: Jovens, com interesse em tecnologia e passam parte do tempo livre no computador.</p>
 
+ 
+![Enzo](imaages/../images/persona.png)
+<p>A persona criada é idealizada como o cliente de nosso sistema.</p>
 
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que 
-> você deve ser enumerar e descrever precisamente e de forma
-> personalizada todos os principais envolvidos com a solução almeja. 
-> 
-> Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Como fazer um mapa de empatia - Vídeo](https://www.youtube.com/watch?v=JlKHGpVoA2Y)
-> 
-> 
-> **Exemplo de Persona**
-> 
-> ![Exemplo de Persona](imaages/../images/persona.png)
-> 
-> Fonte: [Como criar uma persona para o seu negócio](https://raissaviegas.com.br/como-criar-uma-persona/)
 
 
 ## Histórias de Usuários
@@ -157,19 +91,10 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Usuário do sistema  | Encontrar qual o curso que me agrada        | Não cursar algo que não irá me agregar|
+|Usuário do sistema  | Encontrar faculdades próximas               | Pois são mais acessíveis para mim  |
+|Usuário do sistema  | Encontrar faculdades com preços que cabem no meu bolso | Pois não é fácil encontrar estes valores na internet |
 
-> Apresente aqui as histórias de usuário que são relevantes para o
-> projeto de sua solução. As Histórias de Usuário consistem em uma
-> ferramenta poderosa para a compreensão e elicitação dos requisitos
-> funcionais e não funcionais da sua aplicação. Se possível, agrupe as
-> histórias de usuário por contexto, para facilitar consultas
-> recorrentes à essa parte do documento.
->
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 
 ## Requisitos
 
@@ -281,34 +206,12 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 
 # Metodologia
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Nesta parte do documento, você deve apresentar a metodologia 
-> adotada pelo grupo, descrevendo o processo de trabalho baseado nas metodologias ágeis, 
-> a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a
-> gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido
-> pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar
-> o andamento do projeto, a execução das tarefas e o status de desenvolvimento
-> da solução.
-> 
-> **Links Úteis**:
-> - [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
-> - [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
-> - [Gerência de projetos - Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+<p>Antes da iniciação do desenvolvimento, utilizou-se o processo de Design Thinking para delimitar as necessidades dos usuários, criando-se uma persona principal para o nosso projeto. Uma vez criada, a persona facilita a prototipação do projeto, tornando-se palpável a criação de designs que agradam o usuário final.</p>
+<p>Para a realização do trabalho, adotamos a metodologia SCRUM. Para cada tarefa, designamos a dificuldade de execução, definindo-se um prazo relativo à dificuldade. Para cada funcionalidade, faz-se uma reunião com um consumidor para validar a necessidade da funcionalidade.</p>
+<p>Para incrementar o SCRUM, utilizou-se do método Kanban, para se ter uma melhor visualização das tarefas e seus atuais estados. Para a metodologia ágil Kanban, estamos utilizando a ferramenta <a href="https://Trello.com">Trello</a></p>
 
 ## Divisão de Papéis
-
-
-
-> Apresente a divisão de papéis e tarefas entre os membros do grupo.
->
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+<p>Para a divisão de papéis, utiliza-se a pontuação de dificuldade de cada tarefa definida na metodologia Scrum. Dividiu-se as tarefas em grupos de pontuações similares, e cada integrante ficou responsável por um destes grupos de tarefas.</p>
 
 
 ## Ferramentas
