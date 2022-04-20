@@ -116,6 +116,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-010| Permitir a filtragem de universidades por preço | MEDIA |
 |RF-011| Permitir a filtragem de universidades por curso | ALTA |
 |RF-012| Comparação de preços de faculdades particulares | BAIXA |
+|RF-013| Listagem dos cursos de TI com uma breve descrição | ALTA |
 
 
 ### Requisitos não Funcionais
