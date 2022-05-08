@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Cursos</title>
+
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- BOOTSTRAP 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- FONT AWESOME 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- PAGE ICON -->
+    <link rel="icon" href="../../../assets/img/logo-pequeno.jpg">
+    
+    <!-- DATATABLE -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+</head>
+
+<body>
+    <div class="home-background">
+        <header class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand me-2 me-sm-5" href="#">
+                          <img src="../../../assets/img/logo-pequeno.jpg" height="100" alt="Portal de Filmes">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                          aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                          <i class="fas fa-bars h1 mb-0"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                              <li>
+                                  <a class="btn btn-nav btn-outline-light nav-btn" aria-current="page" href="#">Cursos</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="btn btn-nav btn-outline-light nav-btn" href="#">Formulário</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="btn btn-nav btn-outline-light nav-btn" href="#">Universidades</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="btn btn-nav btn-outline-light nav-btn" href="#">Notícias</a>
+                              </li>
+                            </ul>
+                            <form>
+                              <div class="input-group mb-2 mb-lg-0">
+                                <input type="text" class="form-control" type="search" placeholder="Pesquisar" aria-label="Search"
+                                  aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                  <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                              </div>
+                            </form>
+                            <i class="user-icon fa fa-user-circle fa-2x mb-2 mb-lg-0" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="card-box">
+        <h1 class="section-title">Cadastro de Cursos (CRUD)</h1>
+
+        <div class="container">
+            <div class="row">
+                <div id="msg" class="col-sm-10 offset-sm-1 ">
+                    <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+                </div>
+            </div>
+
+            <!--TABELA DE DADOS-->
+            <div class="row" id="table-curso-container">
+                <div class="col-sm-12">
+                    <div class="form-group row add-button">
+                        <div class="col-10">&nbsp;</div>
+                        <div class="col-2 d-flex justify-content-end">
+                            <button class="btn btn-success mb-3" onclick="showScreen(1)">
+                                <i class="fas fa-plus"></i> Criar novo curso
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <table id="table-cursos" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th scope="col-1">#</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Video</th>
+                                    <th scope="col-6">Descrição</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        <!--FORM DE ADICIONAR USUARIO-->
+        <form id="form-curso-add">
+            <p class="text-button" onclick="showScreen(2)" ><i class="fas fa-angle-left"></i> Voltar</p>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <label for="nome">Nome*</label>
+                    <input type="text" class="form-control" id="nome-add" required placeholder="Informe o nome do curso"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <label for="url">Video de apresentação*</label>
+                    <input type="text" class="form-control" id="url" required placeholder="URL">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <label for="descricao">Descrição*</label>
+                    <textarea type="text" class="form-control" id="descricao" placeholder="Descrição"></textarea>
+                </div>
+            </div>
+            <div class="form-group row ">
+                <div class="col-10">&nbsp;</div>
+                <div class="col-2 d-flex justify-content-end">
+                    <button class="btn btn-primary mt-3" onclick="insert()">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!--FORM DE EDITAR USUARIO-->
+        <form id="form-curso-edit">
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="id-edit">Id</label>
+                    <input type="number" class="form-control" id="id-edit" placeholder="ID" disabled>
+                </div>
+                <div class="col-sm-8">
+                    <label for="nome-edit">Nome (*)</label>
+                    <input type="text" class="form-control" id="nome-edit" required placeholder="Informe o nome do contato">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <label for="url-edit">Video de apresentação*</label>
+                    <input type="text" class="form-control" id="url-edit" required placeholder="URL" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <label for="descricao-edit">Descrição*</label>
+                    <textarea type="text" class="form-control" id="descricao-edit" placeholder="Descrição" required></textarea>
+                </div>
+            </div>
+            <div class="form-group row ">
+                <div class="col-8">&nbsp;</div>
+                <div class="col-4 d-flex justify-content-end">
+                    <button class="btn btn-danger mt-3" style="margin-right: 1rem;" onclick="del()">
+                        Deletar
+                    </button>
+                    <button class="btn btn-primary mt-3" onclick="edit()">
+                        Editar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="../../main.js"></script>
+    <script>
+        $(document).ready( function () {
+            exibeCursos();
+            $('#form-curso-add').hide();
+            $('#form-curso-edit').hide();
+        } );
+
+        function exibeCursos() {
+            // Remove todas as linhas do corpo da tabela
+            let cursos = JSON.parse(localStorage.getItem('db_cursos'));   
+            let data = []; 
+            // Popula a tabela com os registros do banco de dados
+            cursos.map(e => {
+               data.push([e.id, e.nome, e.video_apresentacao, e.descricao]);
+            });
+            $('#table-cursos').DataTable({
+                data: data
+            });
+            
+        }
+
+        function showScreen(action){
+            switch(action){
+                case 1: //Tabela
+                    $("#form-curso-add")[0].reset();
+                    $('#form-curso-add').show();
+                    $('#form-curso-edit').hide();
+                    $('#table-curso-container').hide();
+                    break;
+                case 2: // Tela de adicionar
+                    $('#form-curso-add').hide();
+                    $('#form-curso-edit').hide();
+                    $('#table-curso-container').show();
+                    break;
+                case 3: //Tela de editar
+                    $('#form-curso-add').hide();
+                    $('#form-curso-edit').show();
+                    $('#table-curso-container').hide();
+                    break;
+            }
+            
+        }
+
+        function insert(){
+            if (!$('#form-curso-add')[0].checkValidity()) {
+                displayMessageDanger("Preencha o formulário corretamente.");
+                return;
+            }
+
+            // Obtem os valores dos campos do formulário
+            let curso = {
+                nome: $('#nome-add').val(), 
+                video_apresentacao: $('#url').val(), 
+                descricao: $('#descricao').val()
+            };
+            let cursos = JSON.parse(localStorage.getItem('db_cursos'));  
+            curso.id = cursos.at(-1).id + 1;
+            cursos.push(curso);
+            localStorage.setItem('db_cursos', JSON.stringify(cursos));
+            // Limpa o formulario
+            $('#table-cursos').row.add([
+                curso.id, curso.nome, curso.video_apresentacao,  curso.descricao
+            ]);
+            showScreen(2);
+            
+            $("#form-curso-add")[0].reset();
+        }
+
+        function edit(){
+            console.log('teste');
+            if (!$('#form-curso-edit')[0].checkValidity()) {
+                displayMessageDanger("Preencha o formulário corretamente.");
+                return;
+            }
+
+            let curso = {
+                id: parseInt($('#id-edit').val()),
+                nome: $('#nome-edit').val(), 
+                video_apresentacao: $('#url-edit').val(), 
+                descricao: $('#descricao-edit').val()
+            };
+            console.log(curso);
+            function getCountryByCode(code) {
+                return data.filter(
+                    function(data){ return data.code == code }
+                );
+              }
+            let cursos = JSON.parse(localStorage.getItem('db_cursos')); 
+            let index = cursos.map(e => e.id).indexOf(curso.id);
+            
+            cursos[index] = curso; // Altera os dados do objeto no array
+            console.log(index, cursos);
+            localStorage.setItem('db_cursos', JSON.stringify(cursos));
+
+            $('#table-cursos').row(selected).edit([
+                curso.id, curso.nome, curso.video_apresentacao,  curso.descricao
+            ]);
+
+            $("#form-curso-edit")[0].reset(); // Limpa o formulario
+            displayMessageSuccess("Curso alterado com sucesso!");
+            showScreen(2);
+        }
+
+        function del(){
+            let cursos = JSON.parse(localStorage.getItem('db_cursos')); 
+            cursos = cursos.filter(function (element) { return element.id !=  parseInt($('#id-edit').val())});
+            console.log(cursos);
+            // Atualiza os dados no Local Storage
+            $('#table-cursos').DataTable().row(selected).remove().draw( false );
+
+            localStorage.setItem('db_cursos', JSON.stringify(cursos));
+            displayMessageSuccess("Curso removido com sucesso");
+            showScreen(2);
+        }
+       
+        //Evento onclick da tabela
+        var selected;
+        $("#table-cursos").on("click", "tr", function (e) {
+          selected = this.querySelectorAll("td");
+          $('#id-edit').val(selected[0].innerText);
+          $('#nome-edit').val(selected[1].innerText);
+          $('#url-edit').val(selected[2].innerText);
+          $('#descricao').val(selected[3].innerText)
+          showScreen(3);
+        });
+
+        // Oculta a mensagem de aviso após alguns segundos
+        $('#msg').bind("DOMSubtreeModified", function () {
+            window.setTimeout(function () {
+                $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                    $(this).remove();
+                });
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
