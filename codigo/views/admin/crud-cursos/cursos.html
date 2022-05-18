@@ -190,7 +190,7 @@
         $(document).ready( function () {
             let usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
             if(usuarioLogado){
-                if(usuarioLogado.isAdm){
+                if(!usuarioLogado.isAdm){
                     alert("Entre como admin para continuar!")
                     window.location.href = '../../login/login.html';
                 }
