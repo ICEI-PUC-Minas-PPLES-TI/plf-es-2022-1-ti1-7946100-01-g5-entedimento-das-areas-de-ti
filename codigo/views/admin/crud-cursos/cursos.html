@@ -188,9 +188,13 @@
     <script src="../../main.js"></script>
     <script>
         $(document).ready( function () {
-            if(!JSON.parse(sessionStorage.getItem('usuarioCorrente')).isAdm){
-                alert("Entre como admin para continuar!")
-                window.location.href = '../../login/login.html';
+            let usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+            if(usuarioLogado){
+                if(usuarioLogado.isAdm){
+                    alert("Entre como admin para continuar!")
+                    window.location.href = '../../login/login.html';
+                }
+                
             }
             exibeCursos();
             $('#form-curso-add').hide();
