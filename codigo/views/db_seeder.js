@@ -12,6 +12,18 @@ var db_cursos_inicial = {
             "nome": "Engenharia de software",
             "descricao": "",
             "video_apresentacao": "https://www.youtube.com/watch?v=rRixHV6hts0"
+        },
+        {
+            "id": 3,
+            "nome": "Sistemas da Informação",
+            "descricao": "",
+            "video_apresentacao": "https://www.youtube.com/watch?v=rRixHV6hts0"
+        },
+        {
+            "id": 4,
+            "nome": "Engenharia da Computação",
+            "descricao": "",
+            "video_apresentacao": "https://www.youtube.com/watch?v=rRixHV6hts0"
         }
     ]
 }
