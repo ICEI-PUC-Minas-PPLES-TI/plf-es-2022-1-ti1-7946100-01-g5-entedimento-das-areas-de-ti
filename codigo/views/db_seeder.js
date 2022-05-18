@@ -58,7 +58,7 @@ window.onload = () => {
            
         window.location.reload;
     }
-    
+    this.verificaLogado();
 }
 
 function insertData(data, db){
@@ -99,4 +99,11 @@ function deleteContato(id) {
 
     // Atualiza os dados no Local Storage
     localStorage.setItem('db_contato', JSON.stringify(db));
+}
+
+function verificaLogado(){
+    let usuario = sessionStorage.getItem('usuarioCorrente');
+    if(!usuario || usuario == '{}'){
+        document.location.href != "/codigo/views/login/login.html" ?document.location.href = "/codigo/views/login/login.html" :null;
+    }
 }

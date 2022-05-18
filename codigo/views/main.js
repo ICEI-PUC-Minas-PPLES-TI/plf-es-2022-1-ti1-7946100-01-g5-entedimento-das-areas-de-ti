@@ -5,3 +5,9 @@ function displayMessageDanger(msg) {
 function displayMessageSuccess(msg) {
     $('#msg').html('<div class="alert alert-success">' + msg + '</div>');
 }
+
+$('#logout').click(() => {
+    usuarioCorrente = {};
+    sessionStorage.setItem ('usuarioCorrente', JSON.stringify(usuarioCorrente));
+    window.location.reload();
+});
