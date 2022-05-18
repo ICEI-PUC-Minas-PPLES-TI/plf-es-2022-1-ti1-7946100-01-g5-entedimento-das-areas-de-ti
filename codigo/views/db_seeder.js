@@ -116,6 +116,11 @@ function deleteContato(id) {
 function verificaLogado(){
     let usuario = sessionStorage.getItem('usuarioCorrente');
     if(!usuario || usuario == '{}'){
-        document.location.href != "/plf-es-2022-1-ti1-7946100-01-g5-entedimento-das-areas-de-ti/codigo/views/login/login.html" ?document.location.href = "/plf-es-2022-1-ti1-7946100-01-g5-entedimento-das-areas-de-ti/codigo/views/login/login.html" :null;
+        if(document.location.href.split('/')[2] == 'icei-puc-minas-pples-ti.github.io'){
+            document.location.href != "/plf-es-2022-1-ti1-7946100-01-g5-entedimento-das-areas-de-ti/codigo/views/login/login.html" ?document.location.href = "/plf-es-2022-1-ti1-7946100-01-g5-entedimento-das-areas-de-ti/codigo/views/login/login.html" :null;
+        } else {
+            document.location.href != "/codigo/views/login/login.html" ?document.location.href = "/codigo/views/login/login.html" :null;
+        }
+       // 
     }
 }
