@@ -115,7 +115,11 @@
         <form id="form-manchete-add">
             <p class="text-button" onclick="showScreen(2)" ><i class="fas fa-angle-left"></i> Voltar</p>
             <div class="form-group row">
-                <div class="col-sm-12">
+                <div class="col-sm-4">
+                    <label for="id-edit">Id</label>
+                    <input type="number" class="form-control" id="id-edit" placeholder="ID" disabled>
+                </div>
+                <div class="col-sm-9">
                     <label for="titulo">Titulo*</label>
                     <input type="text" class="form-control" id="titulo-add" required placeholder="Informe o título da manchete"/>
                 </div>
@@ -152,26 +156,33 @@
 
         <!--FORM DE EDITAR USUARIO-->
         <form id="form-manchete-edit">
+            <p class="text-button" onclick="showScreen(2)" ><i class="fas fa-angle-left"></i> Voltar</p>
             <div class="form-group row">
-                <div class="col-sm-4">
-                    <label for="id-edit">Id</label>
-                    <input type="number" class="form-control" id="id-edit" placeholder="ID" disabled>
-                </div>
-                <div class="col-sm-8">
-                    <label for="nome-edit">Nome (*)</label>
-                    <input type="text" class="form-control" id="nome-edit" required placeholder="Informe o nome do contato">
+                <div class="col-sm-12">
+                    <label for="titulo">Titulo*</label>
+                    <input type="text" class="form-control" id="titulo-edit" required placeholder="Informe o título da manchete"/>
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-sm-12">
-                    <label for="url-edit">Video de apresentação*</label>
-                    <input type="text" class="form-control" id="url-edit" required placeholder="URL" required>
+                <div class="col-sm-6">
+                    <label for="paragrafo1-add">Paragrafo 1*</label>
+                    <textarea type="text" class="form-control" id="paragrafo1-edit" required placeholder="Paragrafo 1"></textarea>
+                </div>
+                <div class="col-sm-6">
+                    <label for="paragrafo2-add">Paragrafo 2*</label>
+                    <textarea type="text" class="form-control" id="paragrafo2-edit" required placeholder="Paragrafo 2"></textarea>
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-sm-12">
-                    <label for="descricao-edit">Descrição*</label>
-                    <textarea type="text" class="form-control" id="descricao-edit" placeholder="Descrição" required></textarea>
+                <div class="col-sm-6">
+                    <label for="url">Imagem 1*</label>
+                    <input type="file" class="form-control" id="img1-edit" required placeholder="Imagem 1" onchange="encodeImgtoBase64(this, 0)"/>
+                    <img id="img1-edit-file" style="width: 100%;"></img>
+                </div>
+                <div class="col-sm-6">
+                    <label for="url">Imagem 2*</label>
+                    <input type="file" class="form-control" id="img2-edit" required placeholder="Imagem 2" onchange="encodeImgtoBase64(this, 1)"/>
+                    <img id="img1-edit-file" style="width: 100%;"></img>
                 </div>
             </div>
             <div class="form-group row ">
@@ -226,17 +237,20 @@
         function showScreen(action){
             switch(action){
                 case 1: //Tabela
+                    images = [];
                     $("#form-manchete-add")[0].reset();
                     $('#form-manchete-add').show();
                     $('#form-manchete-edit').hide();
                     $('#table-manchete-container').hide();
                     break;
                 case 2: // Tela de adicionar
+                    images = [];
                     $('#form-manchete-add').hide();
                     $('#form-manchete-edit').hide();
                     $('#table-manchete-container').show();
                     break;
                 case 3: //Tela de editar
+                    images = [];
                     $('#form-manchete-add').hide();
                     $('#form-manchete-edit').show();
                     $('#table-manchete-container').hide();
@@ -336,12 +350,19 @@
         //Evento onclick da tabela
         var selected;
         $("#table-manchetes").on("click", "tr", function (e) {
-          selected = this.querySelectorAll("td");
-          $('#id-edit').val(selected[0].innerText);
-          $('#nome-edit').val(selected[1].innerText);
-          $('#url-edit').val(selected[2].innerText);
-          $('#descricao').val(selected[3].innerText)
-          showScreen(3);
+            console.log("Click");
+            selected = this.querySelectorAll("td");
+            let manchetes = JSON.parse(localStorage.getItem('db_manchetes')); 
+            manchete = manchetes.filter(function (element) { return element.id ==  parseInt(selected[0].innerText)})[0];
+            $('#id-edit').val(manchete.id);
+            $('#titulo-edit').val(manchete.titulo);
+            images[0] = manchete.img1;
+            images[1] = manchete.img2;
+            $('#img2-edit-file').attr("src",manchete.img2);
+            $('#img1-edit-file').attr("src",manchete.img1);
+            $('#paragrafo1-edit').val(manchete.paragrafo1);
+            $('#paragrafo2-edit').val(manchete.paragrafo2);
+            showScreen(3);
         });
 
         // Oculta a mensagem de aviso após alguns segundos
