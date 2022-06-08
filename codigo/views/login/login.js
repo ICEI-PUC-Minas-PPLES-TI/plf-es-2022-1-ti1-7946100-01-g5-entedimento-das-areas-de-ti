@@ -23,14 +23,6 @@ function generateUUID() { // Public Domain/MIT
 }
 
 
-const dadosIniciais = {
-    usuarios: [
-        { "id": generateUUID (), "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com", "isAdm":true},
-        { "id": generateUUID (), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com","isAdm":false},
-    ]
-};
-
-
 function initLoginApp () {
     usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
     if (usuarioCorrenteJSON) {
@@ -39,23 +31,13 @@ function initLoginApp () {
     
     var usuariosJSON = localStorage.getItem('db_usuarios');
 
-    if (!usuariosJSON) {  
-        alert('Dados de usuários não encontrados no localStorage. \n -----> Fazendo carga inicial.');
-
-        db_usuarios = dadosIniciais;
-
-        localStorage.setItem('db_usuarios', JSON.stringify (dadosIniciais));
-    }
-    else  {  
-        
-        db_usuarios = JSON.parse(usuariosJSON);    
-    }
+    db_usuarios = JSON.parse(usuariosJSON);    
 };
 
 
 function loginUser(login, senha) {
-    for (var i = 0; i < db_usuarios.usuarios.length; i++) {
-        var usuario = db_usuarios.usuarios[i];
+    for (var i = 0; i < db_usuarios.length; i++) {
+        var usuario = db_usuarios[i];
         
         if (login == usuario.login && senha == usuario.senha) {
             usuarioCorrente = {
@@ -86,7 +68,7 @@ function addUser (nome, login, senha, email) {
     let newId = generateUUID ();
     let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email, "isAdm":false };
     
-    db_usuarios.usuarios.push (usuario);
+    db_usuarios.push(usuario);
 
     localStorage.setItem('db_usuarios', JSON.stringify (db_usuarios));
 }
