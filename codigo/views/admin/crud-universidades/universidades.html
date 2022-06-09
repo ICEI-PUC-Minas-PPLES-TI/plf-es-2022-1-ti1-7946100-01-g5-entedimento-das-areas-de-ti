@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro de Cursos</title>
+    <title>Cadastro de Universidades</title>
 
 
     <link rel="stylesheet" href="../../style.css">
@@ -76,7 +76,7 @@
         </header>
     </div>
     <div class="card-box">
-        <h1 class="section-title">Cadastro de Cursos (CRUD)</h1>
+        <h1 class="section-title">Cadastro de Universidades (CRUD)</h1>
 
         <div class="container">
             <div class="row">
@@ -86,24 +86,26 @@
             </div>
 
             <!--TABELA DE DADOS-->
-            <div class="row" id="table-curso-container">
+            <div class="row" id="table-universidade-container">
                 <div class="col-sm-12">
                     <div class="form-group row add-button">
                         <div class="col-10">&nbsp;</div>
                         <div class="col-2 d-flex justify-content-end">
                             <button class="btn btn-success mb-3" onclick="showScreen(1)">
-                                <i class="fas fa-plus"></i> Criar novo curso
+                                <i class="fas fa-plus"></i> Criar nova universidade
                             </button>
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <table id="table-cursos" class="display" style="width:100%">
+                        <table id="table-universidades" class="display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th scope="col-1">#</th>
                                     <th scope="col">Nome</th>
-                                    <th scope="col">Video</th>
-                                    <th scope="col-6">Descrição</th>
+                                    <th scope="col">Curso</th>
+                                    <th scope="col-6">Descricao</th>
+                                    <th scope="col">Preco</th>
+                                    <th scope="col-2">URL</th>
                                 </tr>
                             </thead>
                         </table>
@@ -112,7 +114,7 @@
             </div>
 
         <!--FORM DE ADICIONAR USUARIO-->
-        <form id="form-curso-add">
+        <form id="form-universidade-add">
             <p class="text-button" onclick="showScreen(2)" ><i class="fas fa-angle-left"></i> Voltar</p>
             <div class="form-group row">
                 <div class="col-sm-12">
@@ -122,14 +124,25 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-12">
-                    <label for="url">Video de apresentação*</label>
-                    <input type="text" class="form-control" id="url" required placeholder="URL">
+                    <label for="url">URL*</label>
+                    <input type="text" class="form-control" id="url-add" required placeholder="URL">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="url">Preço*</label>
+                    <input type="number" class="form-control" id="preco-add" required placeholder="R$">
+                </div>
+                <div class="col-sm-8">
+                    <label for="url">Curso*</label>
+                    <select id="cursos-add" class="form-control" required>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-12">
                     <label for="descricao">Descrição*</label>
-                    <textarea type="text" class="form-control" id="descricao" placeholder="Descrição"></textarea>
+                    <textarea type="text" class="form-control" id="descricao-add" placeholder="Descrição"></textarea>
                 </div>
             </div>
             <div class="form-group row ">
@@ -143,7 +156,8 @@
         </form>
 
         <!--FORM DE EDITAR USUARIO-->
-        <form id="form-curso-edit">
+        <form id="form-universidade-edit">
+            <p class="text-button" onclick="showScreen(2)" ><i class="fas fa-angle-left"></i> Voltar</p>
             <div class="form-group row">
                 <div class="col-sm-4">
                     <label for="id-edit">Id</label>
@@ -156,14 +170,25 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-12">
-                    <label for="url-edit">Video de apresentação*</label>
-                    <input type="text" class="form-control" id="url-edit" required placeholder="URL" required>
+                    <label for="url">URL*</label>
+                    <input type="text" class="form-control" id="url-edit" required placeholder="URL">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="url">Preço*</label>
+                    <input type="number" class="form-control" id="preco-edit" required placeholder="R$">
+                </div>
+                <div class="col-sm-8">
+                    <label for="url">Curso*</label>
+                    <select id="cursos-edit" class="form-control" required>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-12">
-                    <label for="descricao-edit">Descrição*</label>
-                    <textarea type="text" class="form-control" id="descricao-edit" placeholder="Descrição" required></textarea>
+                    <label for="descricao">Descrição*</label>
+                    <textarea type="text" class="form-control" id="descricao-edit" placeholder="Descrição"></textarea>
                 </div>
             </div>
             <div class="form-group row ">
@@ -187,6 +212,9 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
     <script src="../../main.js"></script>
     <script>
+
+        var cursos;
+
         $(document).ready( function () {
             let usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
             if(usuarioLogado){
@@ -196,20 +224,22 @@
                 }
                 
             }
-            exibeCursos();
-            $('#form-curso-add').hide();
-            $('#form-curso-edit').hide();
+            exibeUniversidades();
+            cursos = JSON.parse(localStorage.getItem('db_cursos'));
+            $('#form-universidade-add').hide();
+            $('#form-universidade-edit').hide();
+            montaSelect(true);
         } );
 
-        function exibeCursos() {
+        function exibeUniversidades() {
             // Remove todas as linhas do corpo da tabela
-            let cursos = JSON.parse(localStorage.getItem('db_cursos'));   
+            let universidades = JSON.parse(localStorage.getItem('db_universidades'));   
             let data = []; 
             // Popula a tabela com os registros do banco de dados
-            cursos.map(e => {
-               data.push([e.id, e.nome, e.video_apresentacao, e.descricao]);
+            universidades.map(e => {
+               data.push([e.id, e.nome, e.curso_id, e.descricao, e.preco, e.url]);
             });
-            $('#table-cursos').DataTable({
+            $('#table-universidades').DataTable({
                 data: data
             });
             
@@ -218,103 +248,123 @@
         function showScreen(action){
             switch(action){
                 case 1: //Tabela
-                    $("#form-curso-add")[0].reset();
-                    $('#form-curso-add').show();
-                    $('#form-curso-edit').hide();
-                    $('#table-curso-container').hide();
+                    $("#form-universidade-add")[0].reset();
+                    $('#form-universidade-add').show();
+                    $('#form-universidade-edit').hide();
+                    $('#table-universidade-container').hide();
                     break;
                 case 2: // Tela de adicionar
-                    $('#form-curso-add').hide();
-                    $('#form-curso-edit').hide();
-                    $('#table-curso-container').show();
+                    montaSelect(true);
+                    $('#form-universidade-add').hide();
+                    $('#form-universidade-edit').hide();
+                    $('#table-universidade-container').show();
                     break;
                 case 3: //Tela de editar
-                    $('#form-curso-add').hide();
-                    $('#form-curso-edit').show();
-                    $('#table-curso-container').hide();
+                    $('#form-universidade-add').hide();
+                    $('#form-universidade-edit').show();
+                    $('#table-universidade-container').hide();
+                   
                     break;
             }
             
         }
 
+        function montaSelect(isAdd){
+                var select = "<option>Selecione um curso</option>";
+                cursos.map(x => select += '<option value="'+x.id+'"">'+x.nome+'</option>');
+                $('#cursos-add').html(select);    
+        }
+
         function insert(){
-            if (!$('#form-curso-add')[0].checkValidity()) {
+          
+            if (!$('#form-universidade-add')[0].checkValidity()) {
                 displayMessageDanger("Preencha o formulário corretamente.");
                 return;
             }
 
             // Obtem os valores dos campos do formulário
-            let curso = {
-                nome: $('#nome-add').val(), 
-                video_apresentacao: $('#url').val(), 
-                descricao: $('#descricao').val()
+            let universidade = {
+                nome: $("#nome-add").val(),
+                curso_id: $("#cursos-add").val(),
+                descricao: $("#descricao-add").val(),
+                preco: parseFloat($("#preco-add").val()),
+                url: $("#url-add").val()
             };
-            let cursos = JSON.parse(localStorage.getItem('db_cursos'));  
-            curso.id = cursos.at(-1).id + 1;
-            cursos.push(curso);
-            localStorage.setItem('db_cursos', JSON.stringify(cursos));
+
+            let universidades = JSON.parse(localStorage.getItem('db_universidades'));  
+            universidade.id = universidades.at(-1).id + 1;
+            universidades.push(universidade);
+            localStorage.setItem('db_universidades', JSON.stringify(universidades));
             // Limpa o formulario
-            $('#table-cursos').row.add([
-                curso.id, curso.nome, curso.video_apresentacao,  curso.descricao
+            console.log(universidade.id, universidade.nome, universidade.curso_id, universidade.descricao, universidade.preco, universidade.url);
+
+            $('#table-universidades').row.add([
+                universidade.id, universidade.nome, universidade.curso_id, universidade.descricao, universidade.preco, universidade.url
             ]);
+
             showScreen(2);
             
-            $("#form-curso-add")[0].reset();
+            $("#form-universidade-add")[0].reset();
         }
 
         function edit(){
-            if (!$('#form-curso-edit')[0].checkValidity()) {
+            if (!$('#form-universidade-edit')[0].checkValidity()) {
                 displayMessageDanger("Preencha o formulário corretamente.");
                 return;
             }
 
-            let curso = {
+            let universidade = {
                 id: parseInt($('#id-edit').val()),
-                nome: $('#nome-edit').val(), 
-                video_apresentacao: $('#url-edit').val(), 
-                descricao: $('#descricao-edit').val()
+                nome: $("#nome-edit").val(),
+                curso_id: $("#cursos-edit").val(),
+                descricao: $("#descricao-edit").val(),
+                preco: parseFloat($("#preco-edit").val()),
+                url: $("#url-edit").val()
             };
-            function getCountryByCode(code) {
-                return data.filter(
-                    function(data){ return data.code == code }
-                );
-              }
-            let cursos = JSON.parse(localStorage.getItem('db_cursos')); 
-            let index = cursos.map(e => e.id).indexOf(curso.id);
-            
-            cursos[index] = curso; // Altera os dados do objeto no array
-            localStorage.setItem('db_cursos', JSON.stringify(cursos));
 
-            $('#table-cursos').row(selected).edit([
-                curso.id, curso.nome, curso.video_apresentacao,  curso.descricao
+            let universidades = JSON.parse(localStorage.getItem('db_universidades')); 
+            let index = universidades.map(e => e.id).indexOf(universidade.id);
+            
+            universidades[index] = universidade; // Altera os dados do objeto no array
+            localStorage.setItem('db_universidades', JSON.stringify(universidades));
+
+            $('#table-universidades').row(selected).edit([
+                universidade.id, universidade.nome, universidade.curso_id, universidade.descricao, universidade.preco, universidade.url
             ]);
 
-            $("#form-curso-edit")[0].reset(); // Limpa o formulario
-            displayMessageSuccess("Curso alterado com sucesso!");
+            $("#form-universidade-edit")[0].reset(); // Limpa o formulario
+            displayMessageSuccess("Universidade alterada com sucesso!");
             showScreen(2);
         }
 
         function del(){
-            let cursos = JSON.parse(localStorage.getItem('db_cursos')); 
-            cursos = cursos.filter(function (element) { return element.id !=  parseInt($('#id-edit').val())});
+            let universidades = JSON.parse(localStorage.getItem('universidades')); 
+            universidades = universidades.filter(function (element) { return element.id !=  parseInt($('#id-edit').val())});
 
             // Atualiza os dados no Local Storage
-            $('#table-cursos').DataTable().row(selected).remove().draw( false );
+            $('#table-universidades').DataTable().row(selected).remove().draw( false );
 
-            localStorage.setItem('db_cursos', JSON.stringify(cursos));
-            displayMessageSuccess("Curso removido com sucesso");
+            localStorage.setItem('db_universidades', JSON.stringify(universidades));
+            displayMessageSuccess("Universidade removida com sucesso");
             showScreen(2);
         }
        
         //Evento onclick da tabela
         var selected;
-        $("#table-cursos").on("click", "tr", function (e) {
-          selected = this.querySelectorAll("td");
-          $('#id-edit').val(selected[0].innerText);
-          $('#nome-edit').val(selected[1].innerText);
-          $('#url-edit').val(selected[2].innerText);
-          $('#descricao').val(selected[3].innerText)
-          showScreen(3);
+        $("#table-universidades").on("click", "tr", function (e) {
+            selected = this.querySelectorAll("td");
+            $('#id-edit').val(selected[0].innerText);
+            $('#nome-edit').val(selected[1].innerText);
+            
+            $("#descricao-edit").val(selected[3].innerText),
+            $("#preco-edit").val(parseFloat(selected[4].innerText)),
+            $("#url-edit").val(selected[5].innerText)
+            let select = '';
+            cursos.map(x => select += '<option value="'+x.id+'" '+(x.id == parseInt(selected[2].innerText) ? 'selected': '') +'>'+x.nome+'</option>');
+            console.log(select);
+            $('#cursos-edit').html(select);  
+            
+            showScreen(3);
         });
 
         // Oculta a mensagem de aviso após alguns segundos
