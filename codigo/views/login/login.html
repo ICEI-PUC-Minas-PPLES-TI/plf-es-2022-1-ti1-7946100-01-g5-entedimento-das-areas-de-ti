@@ -96,9 +96,8 @@
                 var password = document.getElementById('password').value;
 
                 resultadoLogin = loginUser(username, password);
-                console.log("PASSOU");
                 if (resultadoLogin) {
-                    if(!sessionStorage.getItem('usuarioCorrente').isAdm)
+                    if(JSON.parse(sessionStorage.getItem('usuarioCorrente')).isAdm)
                         window.location.href = '../admin/index.html'
                     else
                         window.location.href = '../index.html';

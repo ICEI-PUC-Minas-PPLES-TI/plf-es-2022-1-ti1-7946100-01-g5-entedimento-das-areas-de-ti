@@ -4,7 +4,7 @@
   --blue: #00ced1;;
   --light-dark-blue: #008b8d;
   --dark-blue: #013a3b;
-  --color-primary-100: #dee3ea;
+  --color-primary-100: #eceff3;
   --color-primary-700: #242c37;
   --color-primary-800: #151a21;
   --color-primary-900: #0b0e11;
@@ -18,9 +18,9 @@
 body {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   /*background: var(--color-primary-900);*/
-  color:var(--color-primary-100);
   margin-bottom: 1.5rem;
   position: relative;
+  background-color: var(--color-primary-100);
 }
 h1, h2, h3, h4, h5, h6, p {
    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,4 +80,29 @@ header {
   .header .user-icon {
     margin-left: 2rem;
   }
+}
+
+.home-background {
+  overflow:hidden;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.home-background::after, .home-background::before {
+  width: 100%;
+  content: "";
+  position:absolute;
+}
+.home-background::before {
+  z-index: -2;
+  height: calc(100% - 2px);
+  background-color: var(--color-primary-100);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.home-background::after {
+  z-index: -1;
+  height: 45%;
+  background: linear-gradient(0deg, rgba(1, 63, 126, 0.025) 0%, rgb(3, 91, 179) 90%, rgb(15, 120, 224) 100%);
+  top: 40px;
 }
