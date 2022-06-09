@@ -263,7 +263,6 @@
         }
 
         function edit(){
-            console.log('teste');
             if (!$('#form-curso-edit')[0].checkValidity()) {
                 displayMessageDanger("Preencha o formulário corretamente.");
                 return;
@@ -275,7 +274,6 @@
                 video_apresentacao: $('#url-edit').val(), 
                 descricao: $('#descricao-edit').val()
             };
-            console.log(curso);
             function getCountryByCode(code) {
                 return data.filter(
                     function(data){ return data.code == code }
@@ -285,7 +283,6 @@
             let index = cursos.map(e => e.id).indexOf(curso.id);
             
             cursos[index] = curso; // Altera os dados do objeto no array
-            console.log(index, cursos);
             localStorage.setItem('db_cursos', JSON.stringify(cursos));
 
             $('#table-cursos').row(selected).edit([
@@ -300,7 +297,7 @@
         function del(){
             let cursos = JSON.parse(localStorage.getItem('db_cursos')); 
             cursos = cursos.filter(function (element) { return element.id !=  parseInt($('#id-edit').val())});
-            console.log(cursos);
+
             // Atualiza os dados no Local Storage
             $('#table-cursos').DataTable().row(selected).remove().draw( false );
 
