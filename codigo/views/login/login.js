@@ -1,10 +1,6 @@
 
 const LOGIN_URL = "login.html";
 
-var db_usuarios = {};
-
-var usuarioCorrente = {};
-
 // Fonte: https://stackoverflow.com/questions/105034/how-to-create-guid-uuid
 function generateUUID() { // Public Domain/MIT
     var d = new Date().getTime();
@@ -23,19 +19,8 @@ function generateUUID() { // Public Domain/MIT
 }
 
 
-function initLoginApp () {
-    usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
-    if (usuarioCorrenteJSON) {
-        usuarioCorrente = JSON.parse (usuarioCorrenteJSON);
-    }
-    
-    var usuariosJSON = localStorage.getItem('db_usuarios');
-
-    db_usuarios = JSON.parse(usuariosJSON);    
-};
-
-
 function loginUser(login, senha) {
+    var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios'));
     for (var i = 0; i < db_usuarios.length; i++) {
         var usuario = db_usuarios[i];
         
@@ -64,9 +49,11 @@ function logoutUser () {
 }
 
 function addUser (nome, login, senha, email) {
+
+    var db_usuarios = JSON.stringify (db_usuarios);
     
-    let newId = generateUUID ();
-    let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email, "isAdm":false };
+
+    let usuario = { "id": db_usuarios.at(-1).id + 1, "login": login, "senha": senha, "nome": nome, "email": email, "isAdm":false };
     
     db_usuarios.push(usuario);
 

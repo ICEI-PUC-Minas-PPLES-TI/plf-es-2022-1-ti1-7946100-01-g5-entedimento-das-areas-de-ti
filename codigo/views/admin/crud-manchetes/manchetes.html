@@ -43,7 +43,7 @@
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                               <li>
-                                  <a class="btn btn-nav btn-outline-light nav-btn" aria-current="page" href="../crud-manchetes/manchetes.html">Manchetes</a>
+                                  <a class="btn btn-nav btn-outline-light nav-btn" aria-current="page" href="../crud-cursos/cursos.html">Cursos</a>
                               </li>
                               <li>
                                 <a class="btn btn-nav btn-outline-light nav-btn" aria-current="page" href="../index.html">Usuários</a>
@@ -52,7 +52,7 @@
                                   <a class="btn btn-nav btn-outline-light nav-btn" href="../crud-manchetes/manchetes.html">Manchetes</a>
                               </li>
                               <li class="nav-item">
-                                  <a class="btn btn-nav btn-outline-light nav-btn" href="../crud-universidades/">Universidades</a>
+                                  <a class="btn btn-nav btn-outline-light nav-btn" href="../crud-universidades/universidades.html">Universidades</a>
                               </li>
                               <li class="nav-item">
                                   <a class="btn btn-nav btn-outline-light nav-btn" href="#">Notícias</a>
@@ -115,10 +115,6 @@
         <form id="form-manchete-add">
             <p class="text-button" onclick="showScreen(2)" ><i class="fas fa-angle-left"></i> Voltar</p>
             <div class="form-group row">
-                <div class="col-sm-4">
-                    <label for="id-edit">Id</label>
-                    <input type="number" class="form-control" id="id-edit" placeholder="ID" disabled>
-                </div>
                 <div class="col-sm-9">
                     <label for="titulo">Titulo*</label>
                     <input type="text" class="form-control" id="titulo-add" required placeholder="Informe o título da manchete"/>
@@ -163,9 +159,14 @@
         <!--FORM DE EDITAR USUARIO-->
         <form id="form-manchete-edit">
             <p class="text-button" onclick="showScreen(2)" ><i class="fas fa-angle-left"></i> Voltar</p>
+                            
             <div class="form-group row">
-                <div class="col-sm-12">
-                    <label for="titulo">Titulo*</label>
+                <div class="col-sm-4">
+                    <label for="id-edit">Id</label>
+                    <input type="number" class="form-control" id="id-edit" placeholder="ID" disabled>
+                </div>
+                <div class="col-sm-8">
+                    <label for="titulo-edit">Titulo*</label>
                     <input type="text" class="form-control" id="titulo-edit" required placeholder="Informe o título da manchete"/>
                 </div>
             </div>
@@ -182,14 +183,14 @@
             <div class="form-group row">
                 <div class="col-sm-6">
                     <label for="url">Imagem 1*</label>
-                    <input type="file" class="form-control" id="img1-edit" required placeholder="Imagem 1" onchange="encodeImgtoBase64(this, 0)"/>
+                    <input type="file" class="form-control" id="img1-edit"  placeholder="Imagem 1" onchange="encodeImgtoBase64(this, 0)"/>
                     <div style="width: 100%; display:flex; align-items: center; justify-content: center; margin-top: 10px">
                         <img id="img1-edit-file" style="max-height: 300px;"></img>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <label for="url">Imagem 2*</label>
-                    <input type="file" class="form-control" id="img2-edit" required placeholder="Imagem 2" onchange="encodeImgtoBase64(this, 1)"/>
+                    <input type="file" class="form-control" id="img2-edit" placeholder="Imagem 2" onchange="encodeImgtoBase64(this, 1)"/>
                     <div style="width: 100%; display:flex; align-items: center; justify-content: center; margin-top: 10px">
                         <img id="img2-edit-file" style="max-height: 300px;"></img>
                     </div>
@@ -301,7 +302,6 @@
 
 
         function edit(){
-            console.log('teste');
             if (!$('#form-manchete-edit')[0].checkValidity()) {
                 displayMessageDanger("Preencha o formulário corretamente.");
                 return;
@@ -309,25 +309,21 @@
 
             let manchete = {
                 id: parseInt($('#id-edit').val()),
-                nome: $('#nome-edit').val(), 
-                video_apresentacao: $('#url-edit').val(), 
-                descricao: $('#descricao-edit').val()
+                titulo: $('#titulo-edit').val(), 
+                paragrafo1: $('#paragrafo1-edit').val(),
+                paragrafo2: $('#paragrafo2-edit').val(),
+                img1: images[0],
+                img2: images[1]
             };
-            console.log(manchete);
-            function getCountryByCode(code) {
-                return data.filter(
-                    function(data){ return data.code == code }
-                );
-              }
+
             let manchetes = JSON.parse(localStorage.getItem('db_manchetes')); 
             let index = manchetes.map(e => e.id).indexOf(manchete.id);
             
             manchetes[index] = manchete; // Altera os dados do objeto no array
-            console.log(index, manchetes);
             localStorage.setItem('db_manchetes', JSON.stringify(manchetes));
 
-            $('#table-manchetes').row(selected).edit([
-                manchete.id, manchete.nome, manchete.video_apresentacao,  manchete.descricao
+           $("#table-manchetes").row(selected).edit([
+                manchete.id, manchete.titulo, manchete.paragrafo1, manchete.paragrafo2
             ]);
 
             $("#form-manchete-edit")[0].reset(); // Limpa o formulario
@@ -338,7 +334,6 @@
         function del(){
             let manchetes = JSON.parse(localStorage.getItem('db_manchetes')); 
             manchetes = manchetes.filter(function (element) { return element.id !=  parseInt($('#id-edit').val())});
-            console.log(manchetes);
             // Atualiza os dados no Local Storage
             $('#table-manchetes').DataTable().row(selected).remove().draw( false );
 
@@ -355,19 +350,18 @@
                 images[index] = reader.result;
                 if(index == 0){
                     $('#img1-add-file').attr("src", reader.result);
+                    $('#img1-edit-file').attr("src", reader.result);
                 } else {
                     $('#img2-add-file').attr("src",  reader.result);
+                    $('#img2-edit-file').attr("src",  reader.result);
                 }
             }
             reader.readAsDataURL(file);
-
-            
         }
        
         //Evento onclick da tabela
         var selected;
         $("#table-manchetes").on("click", "tr", function (e) {
-            console.log("Click");
             selected = this.querySelectorAll("td");
             let manchetes = JSON.parse(localStorage.getItem('db_manchetes')); 
             manchete = manchetes.filter(function (element) { return element.id ==  parseInt(selected[0].innerText)})[0];
