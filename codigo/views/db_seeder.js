@@ -2,28 +2,28 @@
 var db_cursos_inicial = {
     "data": [
         {
-            "id": 1,
-            "nome": "Ciências da Computação",
-            "descricao": "Como cientista da computação, você estuda, desenvolve e administra soluções de software, programas, aplicativos e sistemas para computadores e diversos outros dispositivos. Ela é dividida em quatro áreas principais: sistemas de software, sistemas de hardware, teoria da computação e computação científica",
-            "video_apresentacao": "https://www.youtube.com/watch?v=rRixHV6hts0"
+            "id":1,
+            "nome":"Ciências da Computação",
+            "video_apresentacao":"https://www.youtube.com/embed/rRixHV6hts0",
+            "descricao":"Ciência da Computação é a área do conhecimento que atua no desenvolvimento de programas para diferentes dispositivos,a exemplo de celulares e computadores. Programação,banco de dados e sistemas operacionais fazem parte do dia a dia de quem se forma na faculdade de Ciência da Computação."
         },
         {
-            "id": 2,
-            "nome": "Engenharia de software",
-            "descricao": "",
-            "video_apresentacao": "https://www.youtube.com/watch?v=rRixHV6hts0"
+            "id":2,
+            "nome":"Engenharia de software",
+            "video_apresentacao":"https://www.youtube.com/embed/uUCGKJni7Nk",
+            "descricao":"Engenharia de software é uma área da engenharia e da computação voltada à especificação, desenvolvimento, manutenção e criação de software, com a aplicação de tecnologias e práticas de gerência de projetos e outras disciplinas."
         },
         {
-            "id": 3,
-            "nome": "Sistemas da Informação",
-            "descricao": "",
-            "video_apresentacao": "https://www.youtube.com/watch?v=rRixHV6hts0"
+            "id":3,
+            "nome":"Sistemas da Informação",
+            "video_apresentacao":"https://www.youtube.com/embed/WCPvppyI2Ys",
+            "descricao":"Sistema de informação é um sistema formal, sociotécnico e organizacional usado para coletar, processar, armazenar e disseminar dados informacionais, podendo ser tanto um sistema informacional computadorizado quanto um sistema manual."
         },
         {
-            "id": 4,
-            "nome": "Engenharia da Computação",
-            "descricao": "",
-            "video_apresentacao": "https://www.youtube.com/watch?v=rRixHV6hts0"
+            "id":4,
+            "nome":"Engenharia da Computação",
+            "video_apresentacao":"https://www.youtube.com/embed/ZjdO2kBCtnI",
+            "descricao":"O curso de Engenharia da Computação tem em sua grade curricular disciplinas voltadas para eletrônica e fabricação de hardware. Essa é a atuação mais tradicional da    profissão"
         }
     ]
 }
