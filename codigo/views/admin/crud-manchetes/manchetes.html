@@ -288,7 +288,12 @@
             };
             let manchetes = JSON.parse(localStorage.getItem('db_manchetes'));  
             
-            manchete.id = manchetes.at(-1).id + 1;
+            try {
+                manchete.id = manchetes.at(-1).id + 1;
+            } catch {
+                manchete.id = 1;
+            }
+            
 
             manchetes.push(manchete);
             localStorage.setItem('db_manchetes', JSON.stringify(manchetes));
@@ -302,7 +307,7 @@
         }
 
 
-
+        var imagesEdit = [];
         function edit(){
             if (!$('#form-manchete-edit')[0].checkValidity()) {
                 displayMessageDanger("Preencha o formulário corretamente.");
@@ -314,8 +319,8 @@
                 titulo: $('#titulo-edit').val(), 
                 paragrafo1: $('#paragrafo1-edit').val(),
                 paragrafo2: $('#paragrafo2-edit').val(),
-                img1: images[0],
-                img2: images[1]
+                img1: images[0] ? images[0] : imagesEdit[0],
+                img2: images[1] ? images[1] : imagesEdit[1]
             };
 
             let manchetes = JSON.parse(localStorage.getItem('db_manchetes')); 
@@ -344,7 +349,7 @@
             showScreen(2);
         }
 
-        let images = [];
+        var images = [];
         function encodeImgtoBase64(element, index) {
             var file = element.files[0];
             var reader = new FileReader();
@@ -371,6 +376,7 @@
             $('#titulo-edit').val(manchete.titulo);
             images[0] = manchete.img1;
             images[1] = manchete.img2;
+            imagesEdit = images;
             $('#img2-edit-file').attr("src",manchete.img2);
             $('#img1-edit-file').attr("src",manchete.img1);
             $('#paragrafo1-edit').val(manchete.paragrafo1);
