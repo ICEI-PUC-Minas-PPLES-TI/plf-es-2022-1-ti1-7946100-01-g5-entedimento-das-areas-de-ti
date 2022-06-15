@@ -105,6 +105,22 @@
             </div>
         </div>
       </section>
+      <section style="margin-top: 40px;">
+        <h1 style="margin-left: 10px;">Manchetes</h1>
+        <div id="manchetes" style="display:block; padding: 30px;">
+          <div class="card" style="display:inline-block; height: 250px; width: 500px;">
+            <div class="row">
+              <div class="col-5" style="display: flex; height: 250px; align-items: center; margin-left: 10px;">
+                <img src="../assets/img/logo-pequeno.jpg" width="100%" alt="Portal de Cursos" style="border-radius: 10%;">
+              </div>
+              <div class="col-6" style="margin-left: 15px;">
+                <h3 class="mt-2">Teste</h3>
+                <p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia assumenda quibusdam, commodi voluptatem maiores debitis?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -115,13 +131,16 @@
 
 <script>
     var cursos = [];
+    var manchetes = [];
   $(document).ready( function () { 
     carregaDados();
     carregaCarrousel();
+    carregaManchetes();
   });
 
   function carregaDados(){
     cursos = JSON.parse(localStorage.getItem('db_cursos'));
+    manchetes = JSON.parse(localStorage.getItem('db_manchetes'));
   }
 
   function carregaCarrousel(){
@@ -156,6 +175,25 @@
     });
     $('#carousel-cursos-conteudo').html(htmlConteudo);
     $('#carousel-cursos-botao').html(htmlBotao);
+  }
+
+  function carregaManchetes(){
+    let htmlConteudo = '';
+    manchetes.map((x, index) => {
+      let descricao = x.paragrafo1? (x.paragrafo1.length > 120 ? (x.paragrafo1.substring(0, 120) + '...') : x.paragrafo1) : ''
+      htmlConteudo +='<div class="card" style="display:inline-block; height: 250px; width: 500px;">'
+      htmlConteudo +='<div class="row">'
+      htmlConteudo +='<div class="col-5" style="display: flex; height: 250px; align-items: center; margin-left: 10px;">'
+      htmlConteudo +='<img src="'+x.img1+'" width="100%" alt="Portal de Cursos" style="border-radius: 10%;">'
+      htmlConteudo +='</div>'
+      htmlConteudo +='<div class="col-6" style="margin-left: 15px;">'
+      htmlConteudo +='<h5 class="mt-2">'+x.titulo+'</h3>'
+      htmlConteudo +='<p class="mt-1">'+descricao+'</p>'
+      htmlConteudo +='</div>'
+      htmlConteudo +='</div>'
+      htmlConteudo +='</div>'
+    });
+    $('#manchetes').html(htmlConteudo)
   }
 </script>
 </html>
