@@ -96,14 +96,14 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-sm-12">
-                        <table id="table-manchetes" class="display" style="width:100%">
+                    <div class="col-sm-12" style="overflow-x: scroll;">
+                        <table id="table-manchetes" class="display" style="width: 100% !important;">
                             <thead>
                                 <tr>
-                                    <th scope="col-1">#</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col-3">Parágrafo 1</th>
-                                    <th scope="col-3">Parágrafo 2</th>
+                                    <th style="width: unset;">#</th>
+                                    <th style="width: unset;">Nome</th>
+                                    <th style="width: unset;">Parágrafo 1</th>
+                                    <th style="width: unset;">Parágrafo 2</th>
                                 </tr>
                             </thead>
                         </table>
@@ -135,14 +135,14 @@
                     <label for="url">Imagem 1*</label>
                     <input type="file" class="form-control" id="img1-add" required placeholder="Imagem 1" onchange="encodeImgtoBase64(this, 0)"/>
                     <div style="width: 100%; display:flex; align-items: center; justify-content: center; margin-top: 10px">
-                        <img id="img1-add-file" style="max-height: 300px;"></img>
+                        <img id="img1-add-file" style="max-height: 300px; max-width: 100%;"></img>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <label for="url">Imagem 2*</label>
                     <input type="file" class="form-control" id="img2-add" required placeholder="Imagem 2" onchange="encodeImgtoBase64(this, 1)"/>
                     <div style="width: 100%; display:flex; align-items: center; justify-content: center; margin-top: 10px">
-                        <img id="img2-add-file" style="max-height: 300px;"></img>
+                        <img id="img2-add-file" style="max-height: 300px; max-width: 100%;"></img>
                     </div>
                 </div>
             </div>
@@ -185,14 +185,14 @@
                     <label for="url">Imagem 1*</label>
                     <input type="file" class="form-control" id="img1-edit"  placeholder="Imagem 1" onchange="encodeImgtoBase64(this, 0)"/>
                     <div style="width: 100%; display:flex; align-items: center; justify-content: center; margin-top: 10px">
-                        <img id="img1-edit-file" style="max-height: 300px;"></img>
+                        <img id="img1-edit-file" style="max-height: 300px; max-width: 100%;"></img>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <label for="url">Imagem 2*</label>
                     <input type="file" class="form-control" id="img2-edit" placeholder="Imagem 2" onchange="encodeImgtoBase64(this, 1)"/>
                     <div style="width: 100%; display:flex; align-items: center; justify-content: center; margin-top: 10px">
-                        <img id="img2-edit-file" style="max-height: 300px;"></img>
+                        <img id="img2-edit-file" style="max-height: 300px; max-width: 100%;"></img>
                     </div>
                 </div>
             </div>
