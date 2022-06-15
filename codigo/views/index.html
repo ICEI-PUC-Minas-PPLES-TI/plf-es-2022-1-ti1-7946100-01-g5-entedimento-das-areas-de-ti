@@ -181,7 +181,7 @@
     let htmlConteudo = '';
     manchetes.map((x, index) => {
       let descricao = x.paragrafo1? (x.paragrafo1.length > 120 ? (x.paragrafo1.substring(0, 120) + '...') : x.paragrafo1) : ''
-      htmlConteudo +='<div class="card" style="display:inline-block; height: 250px; width: 500px;">'
+      htmlConteudo +='<div class="card" style="display:inline-block; height: 250px; width: 500px; cursor: pointer;" onclick="exibirManchete('+x.id+')">'
       htmlConteudo +='<div class="row">'
       htmlConteudo +='<div class="col-5" style="display: flex; height: 250px; align-items: center; margin-left: 10px;">'
       htmlConteudo +='<img src="'+x.img1+'" width="100%" alt="Portal de Cursos" style="border-radius: 10%;">'
@@ -194,6 +194,10 @@
       htmlConteudo +='</div>'
     });
     $('#manchetes').html(htmlConteudo)
+  }
+
+  function exibirManchete(id){
+    window.location.href = getUrl()+'codigo/views/manchete/manchete.html?id='+id;
   }
 </script>
 </html>
