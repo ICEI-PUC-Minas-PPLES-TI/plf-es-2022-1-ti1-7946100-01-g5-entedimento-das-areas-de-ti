@@ -25,7 +25,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand me-2 me-sm-5" href="#">
-                      <img src="../../assets/img/logo-pequeno.png" height="100" alt="Portal de Cursos">
+                      <img src="../../assets/img/logo-pequeno.png" id="home-button" height="100" alt="Portal de Cursos">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
                       aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,9 +42,7 @@
                           <li class="nav-item">
                               <a class="btn btn-nav btn-outline-light nav-btn" href="../universidade/universidade.html">Universidades</a>
                           </li>
-                          <li class="nav-item">
-                              <a class="btn btn-nav btn-outline-light nav-btn" href="#">Notícias</a>
-                          </li>
+                          
                         </ul>
                         <form>
                           <div class="input-group mb-2 mb-lg-0">
@@ -68,7 +66,7 @@
                 <div class="curso" style="border-bottom: solid 1px grey; height: 350px; padding-bottom: 2px; cursor:pointer;" onclick="exibirCurso(null)">
                     <div class="row"> 
                         <div class="col-md-4" style="display: flex; height: 350px; align-items: center;"">
-                            <img src="../../assets/img/logo-pequeno.png" alt="Teste" style="max-width: 100%; max-height: 320px; margin:auto;">
+                            <img src="../../assets/img/logo-pequeno.png" id="home-button" alt="Teste" style="max-width: 100%; max-height: 320px; margin:auto;">
                         </div>
                         <div class="col-md-8">
                             <div style="margin-top: 10px">
@@ -86,7 +84,7 @@
                 <div class="curso" style="border-bottom: solid 1px grey; height: 350px; padding-bottom: 2px;">
                     <div class="row"> 
                         <div class="col-md-4" style="display: flex; height: 350px; align-items: center;">
-                            <img src="../../assets/img/logo-pequeno.png" alt="Teste" style="max-width: 100%; max-height: 320px; margin:auto;">
+                            <img src="../../assets/img/logo-pequeno.png" id="home-button" alt="Teste" style="max-width: 100%; max-height: 320px; margin:auto;">
                         </div>
                         <div class="col-md-8">
                             <div style="margin-top: 10px">
@@ -104,7 +102,7 @@
                 <div class="curso" style="border-bottom: solid 1px grey; height: 350px; padding-bottom: 2px;">
                     <div class="row"> 
                         <div class="col-md-4" style="display: flex; height: 350px; align-items: center;">
-                            <img src="../../assets/img/logo-pequeno.png" alt="Teste" style="max-width: 100%; max-height: 320px; margin:auto;">
+                            <img src="../../assets/img/logo-pequeno.png" id="home-button" alt="Teste" style="max-width: 100%; max-height: 320px; margin:auto;">
                         </div>
                         <div class="col-md-8">
                             <div style="margin-top: 10px">
@@ -147,7 +145,7 @@
                 htmlConteudo+='<div class="curso" style="border-bottom: solid 1px grey; height: 350px; padding-bottom: 2px; cursor:pointer;" onclick="exibirCurso('+x.id+')">';
                 htmlConteudo+='<div class="row"> ';
                 htmlConteudo+='<div class="col-md-4" style="display: flex; height: 350px; align-items: center;">';
-                htmlConteudo+='<img src="../../assets/img/logo-pequeno.png" alt="Teste" style="max-width: 100%; max-height: 320px; margin:auto;">';
+                htmlConteudo+='<img src="'+x.img+'" alt="Teste" style="max-width: 100%; max-height: 320px; margin:auto;">';
                 htmlConteudo+='</div>';
                 htmlConteudo+='<div class="col-md-8">';
                 htmlConteudo+='<div style="margin-top: 10px">';

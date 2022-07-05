@@ -43,9 +43,7 @@
                               <li class="nav-item">
                                   <a class="btn btn-nav btn-outline-light nav-btn" href="../../universidade/universidade.html">Universidades</a>
                               </li>
-                              <li class="nav-item">
-                                  <a class="btn btn-nav btn-outline-light nav-btn" href="#">Notícias</a>
-                              </li>
+                              
                             </ul>
                             <form>
                               <div class="input-group mb-2 mb-lg-0">
@@ -86,7 +84,7 @@
                         <select class="form-control" name="" id="select-change">
                             <option value="" selected>PUC</option>
                         </select>
-                        <p>Preço: R$ 1450,00</p>
+                        <p>Preço: R$ <span id="precoCurso">1450,00</span></p>
                     </div>
                     
 
@@ -99,12 +97,16 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+    <script src="../../db_seeder.js"></script>
+    <script src="../../main.js"></script>
 </body>
 
 <script>
+
     const urlParams = new URLSearchParams(window.location.search);
-    const curso = JSON.parse(localStorage.getItem('db_cursos')).find(x => x.id = urlParams.get('id'));
-    const universidades = JSON.parse(localStorage.getItem('db_universidades')).filter(x => x.curso_id = urlParams.get('id'));
+    console.log(urlParams.get('id'));
+    const curso = JSON.parse(localStorage.getItem('db_cursos')).find(x => x.id == urlParams.get('id'));
+    const universidades = JSON.parse(localStorage.getItem('db_universidades')).filter(x => x.curso_id == urlParams.get('id'));
     $(document).ready( function () { 
         console.log(urlParams.get('id'), curso);
         carregaDados();
@@ -112,8 +114,8 @@
     });
     
     function carregaDados(){
-        /*$('#img1').attr("src",manchete.img1);
-        $('#img2').attr("src",manchete.img2);*/
+        $('#img1').attr("src",curso.img);
+        /*$('#img2').attr("src",manchete.img2);*/
         $('#titulo').html(curso.nome);
         $('#paragrafo1').html(curso.descricao);
         $('#paragrafo2').html(curso.descricao);
@@ -129,12 +131,14 @@
         html += '</select>'
         html += '<p>Preço: R$ <span id="precoCurso">'+universidades[0].preco+'</span>,00</p>'
         $('#select').html(html);
+        var select = document.getElementById('select-change');
+        select.addEventListener('change', change)
     }
 
-    $("#select-change").change(function(){
+    function change(){
         console.log($(this).val());
         let valor = $(this).val();  
         $('#precoCurso').val(valor);
-    })
+    }
     
 </script>

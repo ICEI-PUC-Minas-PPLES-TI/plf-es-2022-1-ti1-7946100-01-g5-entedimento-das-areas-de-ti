@@ -5,25 +5,29 @@ var db_cursos_inicial = {
             "id":1,
             "nome":"Ciências da Computação",
             "video_apresentacao":"https://www.youtube.com/embed/rRixHV6hts0",
-            "descricao":"Ciência da Computação é a área do conhecimento que atua no desenvolvimento de programas para diferentes dispositivos,a exemplo de celulares e computadores. Programação,banco de dados e sistemas operacionais fazem parte do dia a dia de quem se forma na faculdade de Ciência da Computação."
+            "descricao":"Ciência da Computação é a área do conhecimento que atua no desenvolvimento de programas para diferentes dispositivos,a exemplo de celulares e computadores. Programação,banco de dados e sistemas operacionais fazem parte do dia a dia de quem se forma na faculdade de Ciência da Computação.",
+            "img": "https://portal.utfpr.edu.br/cursos/coordenacoes/graduacao/santa-helena/sh-ciencia-da-computacao/imagens/ciencia-da-computacao-logo/@@images/c1ad2d9e-4e7f-45af-ad1c-f05f610517ae.jpeg"
         },
         {
             "id":2,
             "nome":"Engenharia de software",
             "video_apresentacao":"https://www.youtube.com/embed/uUCGKJni7Nk",
-            "descricao":"Engenharia de software é uma área da engenharia e da computação voltada à especificação, desenvolvimento, manutenção e criação de software, com a aplicação de tecnologias e práticas de gerência de projetos e outras disciplinas."
+            "descricao":"Engenharia de software é uma área da engenharia e da computação voltada à especificação, desenvolvimento, manutenção e criação de software, com a aplicação de tecnologias e práticas de gerência de projetos e outras disciplinas.",
+            "img": "https://quizizz.com/_media/quizzes/a61678c9-2c1c-4661-b982-67142c84e712_200_200"
         },
         {
             "id":3,
             "nome":"Sistemas da Informação",
             "video_apresentacao":"https://www.youtube.com/embed/WCPvppyI2Ys",
-            "descricao":"Sistema de informação é um sistema formal, sociotécnico e organizacional usado para coletar, processar, armazenar e disseminar dados informacionais, podendo ser tanto um sistema informacional computadorizado quanto um sistema manual."
+            "descricao":"Sistema de informação é um sistema formal, sociotécnico e organizacional usado para coletar, processar, armazenar e disseminar dados informacionais, podendo ser tanto um sistema informacional computadorizado quanto um sistema manual.",
+            "img": "https://faculdadedombosco.net/media/filer_public/2020_7/42f1c949_logo_sistemas-icone.png"
         },
         {
             "id":4,
             "nome":"Engenharia da Computação",
             "video_apresentacao":"https://www.youtube.com/embed/ZjdO2kBCtnI",
-            "descricao":"O curso de Engenharia da Computação tem em sua grade curricular disciplinas voltadas para eletrônica e fabricação de hardware. Essa é a atuação mais tradicional da    profissão"
+            "descricao":"O curso de Engenharia da Computação tem em sua grade curricular disciplinas voltadas para eletrônica e fabricação de hardware. Essa é a atuação mais tradicional da    profissão",
+            "img": "https://bordandonapratica.com.br/wp-content/uploads/2020/08/Matriz-De-Bordado-Engenharia-da-Computa%C3%A7%C3%A3o-para-bordar-1-1.png"
         }
     ]
 }
@@ -34,17 +38,19 @@ var db_universidades_inicial = {
             "id": 1,
             "nome": "PUC MINAS",
             "curso_id": 1,
-            "descricao": "lorem",
+            "descricao": "Agora, você pode conhecer os prédios, salas e laboratórios da PUC Minas pela sua tela. Caminhe pelos prédios e conheça as salas e laboratórios da PUC Minas pelo tour 360. Qualidade Reconhecida. Diploma Reconhecido. Professores Qualificados.",
             "preco": 900.00,
-            "url": 'https://www.pucminas.br/vestibular/ead/Paginas/default.aspx'
+            "url": 'https://www.pucminas.br/vestibular/ead/Paginas/default.aspx',
+            "img": 'https://minhabiblioteca.com.br/wp-content/uploads/2019/01/PUCMINAS-768x663.png'
         },
         {
             "id": 2,
             "nome": "UFMG",
             "curso_id": 1,
-            "descricao": "lorem ipsun",
-            "preco": 900.00,
-            "url": 'https://www.pucminas.br/vestibular/ead/Paginas/default.aspx'
+            "descricao": "Liderança regional e nacional em ensino superior gratuito, extensão, cultura, pesquisa científica e geração de patentes em todas as áreas do conhecimento.",
+            "preco": 00,
+            "url": 'https://www.pucminas.br/vestibular/ead/Paginas/default.aspx',
+            "img": 'https://logodownload.org/wp-content/uploads/2015/02/ufmg-logo-0-2048x2048.png'
         }
     ]
 }

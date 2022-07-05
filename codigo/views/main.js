@@ -16,3 +16,7 @@ function getUrl(){
     let splitted = document.location.href.split('/');
     return splitted[0]+'/'+splitted[1]+'/'+splitted[2]+'/';
 }
+
+$("#home-button" ).click(function() {
+    window.location.href = getUrl()+'codigo/views/index.html';
+  });
