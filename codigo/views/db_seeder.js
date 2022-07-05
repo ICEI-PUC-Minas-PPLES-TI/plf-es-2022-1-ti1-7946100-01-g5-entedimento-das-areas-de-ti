@@ -130,8 +130,8 @@ function insertData(data, db){
 
 function verificaLogado(){
     let usuario = sessionStorage.getItem('usuarioCorrente');
-    console.log(document.location.href );
-    if((!usuario || usuario == '{}')){
+    console.log(document.location.href.split('/'));
+    if(((!usuario || usuario == '{}') && document.location.href.split('/').includes('admin'))){
         if(document.location.href.split('/')[2] == 'icei-puc-minas-pples-ti.github.io'){
             document.location.href.split('/')[7] != "login.html" ?document.location.href = "/plf-es-2022-1-ti1-7946100-01-g5-entedimento-das-areas-de-ti/codigo/views/login/login.html" :null;
         
