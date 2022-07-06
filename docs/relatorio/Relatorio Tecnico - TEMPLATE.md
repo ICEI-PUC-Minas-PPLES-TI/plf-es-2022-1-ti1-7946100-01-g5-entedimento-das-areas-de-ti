@@ -250,12 +250,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Tecnologias Utilizadas
 
-No nosso projeto, utilizamos html, css, bootsrap, php, javascript manipulando json e jquery.
-O json manipulado foi usado para armazenar dados em localstorage.
-![wireframe cadastro de usuário](images/wireframe-userCadastro.jpg)
-Assim que o usuário entra no site ele é direcionado para fazer o login ou, caso precise, se registrar.
-![wireframe página principal](images/wireframe-home.jpg)
-Na página principal o usuário poderá procurar por cursos e universidades, ver notícias e preencher um formulário para descobrir qual curso é o mais adequado.
+No nosso projeto, utilizamos HTML, CSS, bootsrap, PHP, JavaScript manipulando JSON e jQuery.
+O JSON manipulado foi usado para armazenar dados em localstorage.
+![image](images/pagina-inicial.jpeg)
+Assim que o usuário entra no site onde existem manchetes e videos referentes aos cursos.
 ## Arquitetura da solução
 - Navegador - Interface básica do sistema
   - Páginas Web  (arquivos HTML, CSS, JavaScript)
@@ -264,43 +262,47 @@ Na página principal o usuário poderá procurar por cursos e universidades, ver
 - Hospedagem - github/hiroku
 # Avaliação da Aplicação
 
-......  COLOQUE AQUI O SEU TEXTO ......
+- Acessar o site
+![image](images/pagina-inicial.jpeg)
 
-> Apresente os cenários de testes utilizados na realização dos testes da
-> sua aplicação. Escolha cenários de testes que demonstrem os requisitos
-> sendo satisfeitos.
+- Fazer login
+![image](images/login.jpeg)
+
+- Ver cursos
+![image](images/aba-cursos.jpeg)
+
+- Ver Universidades
+![image](images/universidades.jpeg)
 
 ## Plano de Testes
 
 |ID    | Descrição |  Página referente      |
 |------|-----------------------------------------|---|
-|Teste 01| Cadastrar usuário | Página de login/cadastro |
-|Teste 02| Acessar página de cursos   | Página de cursos |
-|Teste 03| Pesquisar universidades   | Qualquer página |
-|Teste 04| Ver manchetes  | Página notícias |
+|Teste 01| Acessar e verificar se está tudo funcional | Página inicial |
+|Teste 02| Fazer login (sendo admin ou usuario   | Página inicial |
+|Teste 03| Vereficar as informações dos cursos disponiveis | Página de cursos |
+|Teste 04| Vereficar as informações das universidades disponiveis  | Página de universidades |
 
 
-## Ferramentas de Testes (Opcional)
+## Ferramentas de Testes
 
-- Ferramentas do próprio navegador 
+- Ferramentas do próprio navegador: 
 - UX Tools
 - Google Lighthouse
-
-> Comente sobre as ferramentas de testes utilizadas.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
-
+- 
 ## Registros de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Teste 01
+![image](images/pagina-inicial.jpeg)
 
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
+Teste 02
+![image](images/login.jpeg)
 
+Teste 03
+![image](images/aba-cursos.jpeg)
+
+Teste 04
+![image](images/universidades.jpeg)
 
 # Referências
 
