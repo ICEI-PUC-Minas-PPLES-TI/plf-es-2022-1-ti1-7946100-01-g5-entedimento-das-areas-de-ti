@@ -80,11 +80,13 @@
                     <p style="text-align: justify; font-size: large; color:black;" id="paragrafo2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti necessitatibus, cupiditate nesciunt tempora, culpa eaque optio numquam assumenda earum maiores beatae corporis corrupti eligendi expedita dolorem ipsa ipsum doloremque. Voluptate non impedit harum repellendus corrupti animi libero! Cum, aspernatur fuga!</p>
                 </div>
                 <div class="col-sm-12 col-xm-12 col-md-6 col-lg-6 col-xl-6" style="display: flex; align-items: center; height: 500px;">
-                    <div style="width: 50%; margin:auto;" id="select">
-                        <select class="form-control" name="" id="select-change">
-                            <option value="" selected>PUC</option>
-                        </select>
-                        <p>Preço: R$ <span id="precoCurso">1450,00</span></p>
+                    <div style="width: 50%; margin:auto;">
+                        <div id="select">
+                            <select class="form-control" name="" id="select-change">
+                                <option value="" selected>PUC</option>
+                            </select>
+                        </div>
+                        <p>Preço: R$ <span id="precoCurso">900,00</span></p>
                     </div>
                     
 
@@ -129,7 +131,7 @@
         })
         
         html += '</select>'
-        html += '<p>Preço: R$ <span id="precoCurso">'+universidades[0].preco+'</span>,00</p>'
+        //html += '<p>Preço: R$ <span id="precoCurso">'+universidades[0].preco+'</span>,00</p>'
         $('#select').html(html);
         var select = document.getElementById('select-change');
         select.addEventListener('change', change)
@@ -138,7 +140,7 @@
     function change(){
         console.log($(this).val());
         let valor = $(this).val();  
-        $('#precoCurso').val(valor);
+        $('#precoCurso').html(valor);
     }
     
 </script>
