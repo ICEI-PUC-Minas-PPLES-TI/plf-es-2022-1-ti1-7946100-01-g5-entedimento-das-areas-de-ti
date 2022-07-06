@@ -14,6 +14,9 @@ $('#logout').click(() => {
 
 function getUrl(){
     let splitted = document.location.href.split('/');
+    if(splitted.includes('icei-puc-minas-pples-ti.github.io')){
+        return splitted[0]+'/'+splitted[1]+'/'+splitted[2]+'/'+splitted[3]+'/';
+    }
     return splitted[0]+'/'+splitted[1]+'/'+splitted[2]+'/';
 }
 
