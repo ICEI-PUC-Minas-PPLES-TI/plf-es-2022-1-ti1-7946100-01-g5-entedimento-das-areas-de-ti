@@ -1,0 +1,25 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Entendimento das áreas de TI
+authors:
+  - family-names: Herolt Araujo
+    given-names: Gabriel 
+  - family-names: Meireles dos Santos
+    given-names: Mellyssa
+  - family-names: Alves Fernandes Moraes
+    given-names: Miguel 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Luiz Silva Barbosa
+    given-names: João 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Alves Nogueira
+    given-names: Simone 
+keywords:
+  - graduação
+  - áreas de conhecimento
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2022-1-ti1-7946100-01-g5-entedimento-das-areas-de-ti
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2022-07-14
